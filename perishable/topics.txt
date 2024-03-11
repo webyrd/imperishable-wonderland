@@ -1,0 +1,28 @@
+The Most Beautiful Program Ever Written
+
+Build Your Own Barliman
+
+300 Orders of Magnitude or Bust!
+
+-------------------
+Chomsky hierarchy
+
+angelic execution
+
+exceptions
+control effects
+effect handlers
+delimited continuations
+
+fuzzing
+
+program synthesis
+property-based program synthesis
+
+towers of interpreters
+heterogenous towers
+collapsing towers
+
+staged evaluation
+partial deduction
+super compilation (and the relational equivalent)
