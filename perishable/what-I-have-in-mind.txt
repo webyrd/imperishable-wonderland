@@ -1,0 +1,4 @@
+I want this project to be long-term and ongoing, and to reflect on what I find fascinating about relational programming, and about computation.  I also want to maintain a sort of Douglas Adams "Hitchiker's Guide"-like perspective, in which the story can always be rewritten---there is no canonical version of the story.
+
+I want to stick to my original plan, which was to record all the writing on the project.  I will not attempt to record all my thinking on the project, which would be impossible anyway.  I will try to keep my record of the writing process as authentic as possible, which includes both my terribly slow typing and many silent work sessions (which my current working environment requires anyway).  Along with pauses as I think...
+
