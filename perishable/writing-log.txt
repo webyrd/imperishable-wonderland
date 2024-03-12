@@ -9,3 +9,7 @@ Showed off pinned repo on GitHub: `imperishable-wonderland`
 Created this writing log that will include sticky notes I use to communicate with viewers when making silent writing videos, along with what I attempted and/or accomplished during my writing sessions.  I will order the log entries so that the most recent writting sessions come first.
 
 Created a new file `contents.txt` in the `images` directory that contains the contents of the image files in that directory.
+
+Added a `README.md` file for the book in the `imperishable` directory, and included the Creative Commons CC BY Attribution 4.0 International license for the book and said that the code was under an MIT license, but to check the code for details.
+
+Added the Creative Commons CC BY Attribution 4.0 International license to a new page in the book itself.  Created a new `macros.tex` file to contain handy LaTeX macros, such as the `wspace` (Will's Space) macro to give just a tiny bit of vertical spacing.
