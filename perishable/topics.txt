@@ -1,10 +1,78 @@
+# Major 'Arcs' (in the manga/anime sense)
+
 The Most Beautiful Program Ever Written
 
 Build Your Own Barliman
 
-300 Orders of Magnitude or Bust!
+300 Orders of Magnitude or Bust! (Based on a CPP'24 talk showing Monte Carlo simulation + reinforcement learning applied to automated theorem proving finding a proof in a search tree with a branching factor of 10, at a depth of 300, equivalent to finding a solution in a search space of 10^300 (or so it is claimed).  I want the equivalent, or better, for search in miniKanren, for the relational Scheme interpreter and other relational programs.)
 
--------------------
+A Course of Instruction in Programming Languages, Relational Style (interpreters, type checkers/inferencers, semantics, computability theory, proof checkers, automated theorem provers, compilers, etc., all explored from a relational point of view; think of ideas found in EoPL, TAPL, SICP, TLS, <add your own programming languages textbook here>, relational style)
+
+
+# Assorted topics (some of these may be promoted to Arcs, and moved above)
+
+Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
+* Prolog
+* Datalog
+* Answer Set Programming
+
+negation and all that
+* negation as failure
+* the Clark completion (spelling?)
+* conda and condu
+* the g-rule
+* the problems
+* stratified negation
+* ASP notion of negation and stable model semantics
+* encoding negative information through the relational Scheme interpreter: failure to pattern match, `not` as a Scheme predicate, etc.  What is the power, expressiveness, complexity, etc.?  To what extent can staging the interpreter and other techniques reduce the overhead?
+
+different ways to go from Scheme to miniKanren:
+* hand-transformation
+* compile
+* Scheme interpeter in mk
+
+different ways to implement miniKanren:
+* abstract machine
+* deep embedding
+* shallow embedding
+* interpreter
+* compiler
+* FPGA
+* ASIC
+
+macros and miniKanren:
+* a basic intro to Scheme macros
+* macros in context, including how to use macros effectively:
+** how the macros in miniKanren work
+** alternative interfaces to miniKanren
+*** `defrel`
+*** alternative `run` interfaces
+** writing various test macros
+
+how to debug miniKanren programs
+* causes of divergence
+* causes of failure
+* causes of unexpected behavior
+* standard 'gotchas'
+* `run 1` vs. `run *`
+* running a relation with all variables fresh
+
+constraint logic programming
+
+Constraint Handling Rules
+
+concurrent prolog
+
+Larry Moss's 1# register language, relational style
+
+normalization-by-evaluation, relational style
+
+the equivalent of Chris Okasaki's 'Purely Functional Data Structures', but for relational programming
+
+difference lists
+set constraints
+unification over records
+
 Chomsky hierarchy
 
 angelic execution
@@ -20,9 +88,11 @@ program synthesis
 property-based program synthesis
 
 towers of interpreters
+mk in mk
+quasiquote quines in Scheme in Scheme in mk in Scheme, and staging to remove overhead
 heterogenous towers
 collapsing towers
 
 staged evaluation
 partial deduction
-super compilation (and the relational equivalent)
+super compilation (and the relational equivalent: conjunctive partial deduction (is this correct?))
