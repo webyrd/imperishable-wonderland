@@ -1,6 +1,6 @@
 # Major 'Arcs' (in the manga/anime sense)
 
-The Most Beautiful Program Ever Written
+The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, etc.)
 
 Build Your Own Barliman
 
@@ -24,6 +24,7 @@ negation and all that
 * the problems
 * stratified negation
 * ASP notion of negation and stable model semantics
+* explicit encoding of constructive negation by writing a `not-<fooo>` relation as a counterpoint to your "positive" `fooo` relation
 * encoding negative information through the relational Scheme interpreter: failure to pattern match, `not` as a Scheme predicate, etc.  What is the power, expressiveness, complexity, etc.?  To what extent can staging the interpreter and other techniques reduce the overhead?
 
 different ways to go from Scheme to miniKanren:
@@ -57,6 +58,102 @@ how to debug miniKanren programs
 * `run 1` vs. `run *`
 * running a relation with all variables fresh
 
+program transformations, from a relational perspective:
+* transformations of relational programs
+* transformations implemented relationally
+
+What makes a program relational?  What does that mean?  How can you tell if a program is relational?
+
+How to translate a Prolog program to miniKanren.  How to deal with the nasty bits of Prolog that aren't relational
+
+How to deal with the nasty bits of a Scheme program you want to translate to miniKanren
+
+How to take an academic CS/PL paper and translate the rules to miniKanren, and play with those rules
+
+how to deal with scope and binding: environments, De Bruijn, combinatory logic, nominal unification/equivariant unification, HOAS, etc.
+
+N ways to perform arithemetic relationally
+* Oleg arithmetic
+* Peano
+* CLP(FD)
+* CLP(Z)
+* CLP(SMT)
+* delayed goals
+
+tree automata
+e-graphs
+version space algebras
+
+program synthesis -- try implementing various synthesis algorithms
+
+search
+* Oleg search
+* DFS/BFS/IDDFS
+* A*
+* neural-guided search
+* MCTS
+* MC simulation + RL
+* minimize KL-divergence
+
+bidirectional computing
+
+reversible computing
+
+deep encoding + shallow encoding of mk-in-mk: combine to get run* expressiveness with performance closer to that of shallow embeddings
+
+abstracting abstract machines
+
+tabling
+
+implementing different logics
+
+Idris/miniKanren Love Child
+
+combining parser, type checker/inferencer, and interpeter -- deal with the conjunction problem
+
+the problems in miniKanren and general-purpose relational programming
+* conjunction
+* negation
+* general-purpose vs. specialized constraints
+* composing constraints
+
+LeanTAP and other ATPsx
+
+case studies in making programs relational, and exploring the resulting relations
+
+case studies in making miniKanren programs fast
+
+porting miniKanren to other languages and runtimes
+
+understanding and hacking the implementation of `faster-miniKanren`
+
+a taxonomy of miniKanren-related languages
+
+revisiting Kanren
+
+revisiting `mirror` and the old skool Kanren examples
+
+annotated bibliography of miniKanren-related literature
+
+Fifth Generation Computing Project
+
+Archaelogy into old logic and relational languages
+
+alternate tech for building mk:
+* ferns
+* propagators
+* Warren Abstract Machine
+
+Prolog/Datalog/ASP
+Lambda Prolog
+Godel
+Escher
+Verse
+Mercury
+etc.
+
+concatenative programming
+
 constraint logic programming
 
 Constraint Handling Rules
@@ -66,6 +163,10 @@ concurrent prolog
 Larry Moss's 1# register language, relational style
 
 normalization-by-evaluation, relational style
+
+relational implementation of FORTH
+
+mutually-recursive relational languages
 
 the equivalent of Chris Okasaki's 'Purely Functional Data Structures', but for relational programming
 
@@ -96,3 +197,7 @@ collapsing towers
 staged evaluation
 partial deduction
 super compilation (and the relational equivalent: conjunctive partial deduction (is this correct?))
+
+extended Andorra model and conjunction
+
+should `run*` use DFS?
