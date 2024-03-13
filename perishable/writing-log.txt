@@ -1,8 +1,18 @@
-Writing Log
+# Writing Log
 
-Tuesday, March 12, 2024
 
-Session 1
+## Tuesday, March 12, 2024
+
+
+### Session 2
+
+Switched from LaTeX to Markdown and Pandoc.  I want to do this to keep from ending up with a format (PDF or complex LaTeX/BibTeX/etc) that is hard to read or manipulate, and hard to translate to other formats.
+
+The switch to Markdown and Pandoc seemed painless enough.  I'll have to get used to giving up some control over formatting.  The extended Pandoc version of Markdown has special features that might prove useful.  I updated the Makefile to generate a PDF version of the document from the Markdown.  I could also do more fancy LaTeX generation, but I'll defer that for now.
+
+
+
+### Session 1
 
 Showed off pinned repo on GitHub: `imperishable-wonderland`
 
