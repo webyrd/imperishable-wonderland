@@ -181,6 +181,31 @@ Fizzbuzz, relational style
 
 Metamagical Themas: Lisp, self-reps, quines, and viruses -- miniKanren style
 self-rep explorations with Nada Amin -- try to push further
+self-modifying relational interpeter?
+
+reflective tower of relational interpreters, in which one level can reach up and modify a level interpreting it
+
+miniKanren quines -- mk `run` expressions that generate themselves -- try to generate using mk-in-mk (Michael Ballantyne has constructed these by hand)
+
+visualizing the search space
+
+modes
+impure mk: project, conda, condu, copy_term, etc.
+
+purity in Prolog -- more than just avoiding cut
+
+various flavors of cut in Prolog: all the colors and mixes of colors; "soft-cut"; committed-choice non-determinism; Mercury; Oleg's explanation of what inspired `conda` vs `condu` in framenotes of TRS
+
+true meta-circular Scheme interp
+true meta-circular mk interp
+
+mixing Scheme and mk code *relationally* through implementing Scheme and mk interpreters relationally in miniKanren: should be able to handle relationally (for example, perform synthesis) over mixtures of Scheme and mk as seen in TRS1, for example
+
+handling fully relationally higher-order miniKanren relations such as `mapo`, through mk-in-mk
+
+microKanren in Scheme in mk in Scheme to get relational behavior -- collapse/stage that!
+
+can we synthesize a radiation-hardened quine?
 
 combinatory logic in mk
 synthesizing fixed point combinators
@@ -216,6 +241,37 @@ LeanCOP
 Matt's simple proof checker and the 2017 ICFP pearl
 
 Fun with GEB
+GEB MIU interpreter -- I think I have a GitHub repo on this, with a U of Utah student -- undecidability
+
+relational automata -- tabling, e-graphs, VSA, etc. -- try to recapture decidability and the ideal complexity classes, when the problems are deciadable (or in a mode in which everything should be decidable)
+
+revisit Oleg's proofs in the purely relational arithmetic FLOPS paper; alternative representation of these numerals; tree constraints, e-graphs, etc.  sharing, tabling, etc.?  Hilbert's 10th problem
+
+Hindley-Milner type inference; `let` polymorphism -- how best to represent?  complexity classes; principal typing; have we ever solved these issues satisfactorily?
+
+Oleg's higher-order relation fixed point trick for relational type inferencer
+
+non-monotonic logics
+
+temporal logics
+
+Ivan Bratko book
+
+abductive reasoning
+
+inductive logic programming
+
+synthesis using relational interpreter and the complexity of program traces (vs. length of the code); a short Scheme program might require more computation than a longer program, if the shorter program has a longer trace to reach success (due to the use of a recursive helper, for example); `reverse` using `append` is hard for Barliman to find, if I remember correctly
+
+Barliman optimizations
+
+look at the screenshots of Barliman examples; also, the Clojure/conj talk I gave with Greg in Austin
+
+n-grams for synthesis
+
+termination analysis of mk relations, based on decreasing measure on argument terms -- Petr Lozov's dissertation work
+
+interesting SW and mk Workshop papers
 
 type systems and termination
 occurs check and self-application and termination
