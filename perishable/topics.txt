@@ -1,15 +1,19 @@
 # Major 'Arcs' (in the manga/anime sense)
 
-The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, etc.)
+The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, call-by-value vs. call-by-name vs. call-by-need s. call-by-push-value, etc.)
 
 Build Your Own Barliman
 
 300 Orders of Magnitude or Bust! (Based on a CPP'24 talk showing Monte Carlo simulation + reinforcement learning applied to automated theorem proving finding a proof in a search tree with a branching factor of 10, at a depth of 300, equivalent to finding a solution in a search space of 10^300 (or so it is claimed).  I want the equivalent, or better, for search in miniKanren, for the relational Scheme interpreter and other relational programs.)
 
-A Course of Instruction in Programming Languages, Relational Style (interpreters, type checkers/inferencers, semantics, computability theory, proof checkers, automated theorem provers, compilers, etc., all explored from a relational point of view; think of ideas found in EoPL, TAPL, SICP, TLS, <add your own programming languages textbook here>, relational style)
+A Course of Instruction in Programming Languages, Relational Style (interpreters, type checkers/inferencers, semantics, computability theory, proof checkers, automated theorem provers, compilers, etc., all explored from a relational point of view; think of ideas found in EoPL, TAPL, SICP, TLS, Sipser, Nilson and Nilson semantics book, <add your own programming languages textbook here>, relational style)
 
 
 # Assorted topics (some of these may be promoted to Arcs, and moved above)
+
+TODO go through all my repos, as well
+
+TODO look at mk Workshop papers
 
 Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
 * Prolog
@@ -70,7 +74,154 @@ How to deal with the nasty bits of a Scheme program you want to translate to min
 
 How to take an academic CS/PL paper and translate the rules to miniKanren, and play with those rules
 
-how to deal with scope and binding: environments, De Bruijn, combinatory logic, nominal unification/equivariant unification, HOAS, etc.
+how to deal with scope and binding: environments, De Bruijn, locally nameless, combinatory logic, nominal unification/equivariant unification, HOAS, nominal sets, etc.
+
+relational macro expander:
+* fexprs
+* hygienic Scheme macros
+
+environment trimming; memory management for logic programming
+
+reading and implementing judgements
+
+propositional calculus
+predicate calculus
+monadic second-order logic
+higher-order logic
+higher-order unification
+HH Formula, and in Lambda Prolog
+implication and negation in Lambda Prolog
+
+eigen variables
+universal vs. existential quantification
+nominal logic and quantification
+
+parsing
+* with derivatives
+* PEG
+* packrat
+* DCG + tabling (and equivalence to packrat parsing)
+* LALR
+* parser combinators
+
+defeasible logic
+linear logic
+linear logic multiset rewriting
+
+fixed point semantics
+stable model semantics
+
+denotational semantics
+operational semantics
+axiomatic semantics
+
+equational reasoning
+
+laziness
+
+function-logic programming
+
+generators
+Icon
+
+constructive logic
+intuitionistic logic
+classical logic
+
+mechanized meta-theory
+
+heap/stack/registers
+
+backjumping
+CDCL
+two-watched literal scheme
+unit propagation
+underconstraints
+SAT
+SMT
+solver-oriented programming
+
+presento vs. absento
+tree automata
+
+Robinson and unification
+the resolution method
+
+unification and lattices; Plotkin and Reynolds papers
+finding fixpoints over lattices
+lattice-oriented programming
+LVars and LVish
+abstract interpretation, datalog, etc.
+
+segment variables and pattern matching/unification
+
+matche
+
+duals of unification
+
+anti-unification
+
+CLP(Tree)
+=/=
+absento
+type constraints
+
+typed miniKanren
+
+correctness-preserving program transformations
+representation independence
+defunctionalization
+CPS
+trampolining
+registerization
+
+first-order miniKanren
+
+Fizzbuzz, relational style
+
+Metamagical Themas: Lisp, self-reps, quines, and viruses -- miniKanren style
+self-rep explorations with Nada Amin -- try to push further
+
+combinatory logic in mk
+synthesizing fixed point combinators
+* the different approaches I've tried
+
+Quines, twines, thrines
+absento trick for twines
+Quine relay
+self-reps
+Kleene's Recursion theorems
+Omega and Y and U combinators
+Omega as small-step Quine
+
+vicious circles
+non-well-founded set theory
+coinductive logic programming, tabling, streams, etc.
+rational infinite trees, Prolog II, etc.
+
+tabled logic programming and abstract interpretation
+
+top-down vs. bottom-up evaluation
+
+bi-directional search
+
+magic sets
+
+focused proof search
+
+mk as theorem prover
+reifying the proof tree
+LeanTAP
+LeanCOP
+Matt's simple proof checker and the 2017 ICFP pearl
+
+Fun with GEB
+
+type systems and termination
+occurs check and self-application and termination
+
+the issue with small-step, multi-pass compilers, etc. -- "breaking the wires"
+fail fast
 
 N ways to perform arithemetic relationally
 * Oleg arithmetic
