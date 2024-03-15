@@ -1,19 +1,43 @@
 # Major 'Arcs' (in the manga/anime sense)
 
 The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, call-by-value vs. call-by-name vs. call-by-need s. call-by-push-value, etc.)
+cool-relational-interpreter-examples
+Fun, interesting, and thought-provoking examples of relational Scheme interpreters at work.
+https://github.com/webyrd/cool-relational-interpreter-examples
+Grab examples from Barliman repo, and from Clojure.conj talk with Greg in Austin
+relational-interpreter-with-set-bang
+Relational Scheme interpreter, written in miniKanren, with set!, and supporting different evaluation orders.
+https://github.com/webyrd/relational-interpreter-with-set-bang
 
-Build Your Own Barliman
+Explore the strange-looking behavior of shallow and deep embedding of the same language for mk-in-mk, and how combining both interpreters in one query sharing logic variables representing the same program can result in increased expressive power (deep embedding giving run* semantics rather than run 1 semantics), but with efficiency closer to that of the shallow embedding. (see my mk-in-mk experiments with these two interps--which repo is that in, again?)
+What other behaviors in which we perform a conjunction of multiple interpreters for the same or similar languages, sharing fresh logic variables, seem interesting in a similar way, or which might shine light on this behavior?
+* Dynamic vs. lexical scope interpreters in 2017 ICFP Pearl
+* Generation of simple multi-language quines using relational interpreters for two Scheme-like languages. (https://github.com/webyrd/multi-quine)
+Is this (or similar) behavior(s) seen in other contexts?
 
 300 Orders of Magnitude or Bust! (Based on a CPP'24 talk showing Monte Carlo simulation + reinforcement learning applied to automated theorem proving finding a proof in a search tree with a branching factor of 10, at a depth of 300, equivalent to finding a solution in a search space of 10^300 (or so it is claimed).  I want the equivalent, or better, for search in miniKanren, for the relational Scheme interpreter and other relational programs.)
+
+Build Your Own Barliman
 
 A Course of Instruction in Programming Languages, Relational Style (interpreters, type checkers/inferencers, semantics, computability theory, proof checkers, automated theorem provers, compilers, etc., all explored from a relational point of view; think of ideas found in EoPL, TAPL, SICP, TLS, Sipser, Nilson and Nilson semantics book, <add your own programming languages textbook here>, relational style)
 
 
 # Assorted topics (some of these may be promoted to Arcs, and moved above)
 
+TODO go through Untitled Relational Interpreter Book outlines and LaTeX and readme
+https://github.com/webyrd/untitled-relational-interpreter-book
+
+TODO go through 2014 miniKanren-uncourse repo
+https://github.com/webyrd/miniKanren-uncourse
+
 TODO go through all my repos, as well
 
 TODO look at mk Workshop papers
+
+TODO look at draft papers, my private repos, etc.  Some of this will have to be off-camera.
+
+** MarkovJunior looks super cool.  I suspect there is a way to combine this with mk **
+MarkovJunior is a probabilistic programming language where programs are combinations of rewrite rules and inference is performed via constraint propagation. MarkovJunior is named after mathematician Andrey Andreyevich Markov, who defined and studied what is now called Markov algorithms. https://github.com/mxgmn/MarkovJunior
 
 Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
 * Prolog
@@ -76,11 +100,28 @@ How to take an academic CS/PL paper and translate the rules to miniKanren, and p
 
 how to deal with scope and binding: environments, De Bruijn, locally nameless, combinatory logic, nominal unification/equivariant unification, HOAS, nominal sets, etc.
 
+trace how Kanren and miniKanren have changed over time, along with other miniKanren-like languages, such as core.logic and OCanren.  Document the languages.  Look at the implementations.
+
+revisit https://github.com/webyrd/declarative-semantics
+miniKanren prototype of version v2 of 'Declarative semantics for functional languages: compositional, extensional, and elementary' by Jeremy Siek.
+
 relational macro expander:
 * fexprs
 * hygienic Scheme macros
 
 environment trimming; memory management for logic programming
+
+McCarthy's `amb`
+
+even vs. odd streams
+streams vs. 2-continuation (sk & fk) model of backtracking
+old skool mk based on sk & fk
+
+AM & Eurisko
+Programmer's Apprentice
+BAT
+
+mediKanren and dbKanren
 
 reading and implementing judgements
 
@@ -103,10 +144,6 @@ parsing
 * DCG + tabling (and equivalence to packrat parsing)
 * LALR
 * parser combinators
-
-defeasible logic
-linear logic
-linear logic multiset rewriting
 
 fixed point semantics
 stable model semantics
@@ -132,12 +169,24 @@ mechanized meta-theory
 
 heap/stack/registers
 
+probKanren -- trace evolution of versions 1, 2, and 3
+current approach and goals and challenges
+
+wreckto-verseo Verse Calculus in miniKanren
+
+Icon in miniKanren
+
+revisit relational sorting
+https://github.com/webyrd/relational-sorting
+
+look at Jetisu (Jetisu is a toolset for modelling with sigma complete relations; Doing for computation and business rules what the relational model did for data https://github.com/DavidPratten/jetisu)
+
 backjumping
 CDCL
 two-watched literal scheme
 unit propagation
 underconstraints
-SAT
+SAT -- look at MB's mkcdcl (miniKanren with conflict-driven clause learning using a SAT solver) https://github.com/michaelballantyne/mkcdcl
 SMT
 solver-oriented programming
 
@@ -168,12 +217,38 @@ type constraints
 
 typed miniKanren
 
+look at Clever Algorithms: Nature-Inspired Programming Recipes, from the viewpoint of mk and relational programming https://github.com/clever-algorithms/CleverAlgorithms
+
+raytracing/raycasting/etc, viewed relationally
+https://github.com/webyrd/simple-raytracer/blob/master/raytracer.rkt
+I know there are some interesting new algorithms that can do inference
+
+look at Holmes (Holmes is a library for computing constraint-solving problems. Under the hood, it uses propagator networks and conflict-directed clause learning to optimise the search over the parameter space.
+https://github.com/i-am-tom/holmes)
+
+look at diff-SAT: Probabilistic Answer Set Programming and Probabilistic SAT Solving (https://github.com/MatthiasNickles/diff-SAT)
+
+look at https://github.com/ImparaAI/monte-carlo-tree-search
+
+look at Differential Dataflow (An implementation of differential dataflow over timely dataflow on Rust. https://github.com/TimelyDataflow/differential-dataflow)
+
+look at Guanxi again: https://github.com/ekmett/guanxi
+
+look at https://github.com/bboskin/syllogistic-provers
+syllogistic-provers:
+These are some syllogistic provers I made over the summer of 2017.
+Inspired by Larry Moss's M482 course in Mathematical Logic, and Dan Friedman's C311 course in Programming Language Principles, I used miniKanren to make provers for some basic logical systems covered in Moss's class.
+The miniKanren language is used courtesy of Dan Friedman, William E. Byrd, and Oleg Kiselyov http://minikanren.org/
+
 correctness-preserving program transformations
+(see https://github.com/namin/lambdajam)
 representation independence
 defunctionalization
 CPS
 trampolining
 registerization
+
+WiljaEdit relational transformation-based structured editor
 
 first-order miniKanren
 
@@ -187,7 +262,27 @@ reflective tower of relational interpreters, in which one level can reach up and
 
 miniKanren quines -- mk `run` expressions that generate themselves -- try to generate using mk-in-mk (Michael Ballantyne has constructed these by hand)
 
+meta-miniKanren
+https://github.com/michaelballantyne/meta-minikanren
+metaKanren
+
 visualizing the search space
+
+revisit CDG repos and experiments
+https://github.com/orgs/cdglabs/repositories
+
+revisit miniKanren Playground
+https://github.com/webyrd/minikanren-playground
+
+revisit relational-reactive-programming
+https://github.com/webyrd/relational-reactive-programming
+
+revisit Polyconf 2015 code, especially wrt angelic execution
+https://github.com/webyrd/polyconf-2015
+
+dependent types in miniKanren
+Idris/miniKanren Love Child
+https://github.com/webyrd/curnelo
 
 modes
 impure mk: project, conda, condu, copy_term, etc.
@@ -248,8 +343,12 @@ relational automata -- tabling, e-graphs, VSA, etc. -- try to recapture decidabi
 revisit Oleg's proofs in the purely relational arithmetic FLOPS paper; alternative representation of these numerals; tree constraints, e-graphs, etc.  sharing, tabling, etc.?  Hilbert's 10th problem
 
 Hindley-Milner type inference; `let` polymorphism -- how best to represent?  complexity classes; principal typing; have we ever solved these issues satisfactorily?
+https://github.com/webyrd/hindley-milner-type-inferencer
 
 Oleg's higher-order relation fixed point trick for relational type inferencer
+
+revisit mult-quines
+https://github.com/webyrd/multi-quine
 
 non-monotonic logics
 
@@ -305,16 +404,29 @@ search
 bidirectional computing
 
 reversible computing
+RFun: A reversible functional programming language
+https://github.com/webyrd/rfun-interp
 
 deep encoding + shallow encoding of mk-in-mk: combine to get run* expressiveness with performance closer to that of shallow embeddings
 
 abstracting abstract machines
 
 tabling
+https://github.com/webyrd/tabling
+
+miniKanren interpreter in Scheme
+https://github.com/webyrd/mk-interp
+
+revisit techniques and programs in Advanced miniKanren Hangouts
+https://github.com/webyrd/miniKanren-hangout-summaries
 
 implementing different logics
+defeasible logic
+linear logic
+linear logic multiset rewriting
+modal logic
 
-Idris/miniKanren Love Child
+interactive fiction and storytelling
 
 combining parser, type checker/inferencer, and interpeter -- deal with the conjunction problem
 
@@ -360,6 +472,9 @@ Mercury
 etc.
 
 concatenative programming
+cato
+Concatenative relational interpreter in miniKanren
+https://github.com/webyrd/cato
 
 constraint logic programming
 
