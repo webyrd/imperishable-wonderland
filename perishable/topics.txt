@@ -8,12 +8,22 @@ Grab examples from Barliman repo, and from Clojure.conj talk with Greg in Austin
 relational-interpreter-with-set-bang
 Relational Scheme interpreter, written in miniKanren, with set!, and supporting different evaluation orders.
 https://github.com/webyrd/relational-interpreter-with-set-bang
+Error-handling relational interpreter:
+https://github.com/webyrd/error-handling-relational-interpreter
+ICFP 2017 and SW 2012 papers
+PolyConf 2015 talk and workshop
+Look at staged-mk examples
+* Explore 3D code and quoted procedures in the relational interpreter
 
 Explore the strange-looking behavior of shallow and deep embedding of the same language for mk-in-mk, and how combining both interpreters in one query sharing logic variables representing the same program can result in increased expressive power (deep embedding giving run* semantics rather than run 1 semantics), but with efficiency closer to that of the shallow embedding. (see my mk-in-mk experiments with these two interps--which repo is that in, again?)
 What other behaviors in which we perform a conjunction of multiple interpreters for the same or similar languages, sharing fresh logic variables, seem interesting in a similar way, or which might shine light on this behavior?
 * Dynamic vs. lexical scope interpreters in 2017 ICFP Pearl
 * Generation of simple multi-language quines using relational interpreters for two Scheme-like languages. (https://github.com/webyrd/multi-quine)
 Is this (or similar) behavior(s) seen in other contexts?
+
+The challenges of conjunction
+revisit cartesian-evalo: Cartesian product of multiple evalos
+https://github.com/webyrd/cartesian-evalo
 
 300 Orders of Magnitude or Bust! (Based on a CPP'24 talk showing Monte Carlo simulation + reinforcement learning applied to automated theorem proving finding a proof in a search tree with a branching factor of 10, at a depth of 300, equivalent to finding a solution in a search space of 10^300 (or so it is claimed).  I want the equivalent, or better, for search in miniKanren, for the relational Scheme interpreter and other relational programs.)
 
@@ -27,14 +37,20 @@ A Course of Instruction in Programming Languages, Relational Style (interpreters
 TODO go through Untitled Relational Interpreter Book outlines and LaTeX and readme
 https://github.com/webyrd/untitled-relational-interpreter-book
 
+TODO go through my 2014 Lambda Lounge Utah talk repo -- cKanren, finite automata and state machines, etc. https://github.com/webyrd/lambda-lounge-utah-mk-talk
+
 TODO go through 2014 miniKanren-uncourse repo
 https://github.com/webyrd/miniKanren-uncourse
+
+TODO go through 2014 SL talk, inclusing `mathy-stuff.pdf` (https://github.com/webyrd/Strange-Loop-2014/blob/master/mathy-stuff.pdf) https://github.com/webyrd/Strange-Loop-2014.  I have more expansive equivalents to mathy stuff.  mathy stuff is also a good way to explain how to read judgements, how one might think about judgements, how to implement them in mk, etc.
+
+TODO watch Clojure/conj talk with Nada Amin: From Greek to Clojure
 
 TODO go through all my repos, as well
 
 TODO look at mk Workshop papers
 
-TODO look at draft papers, my private repos, etc.  Some of this will have to be off-camera.
+TODO look at draft papers, my private repos, TiddlyWiki, etc.  Some of this will have to be off-camera.
 
 ** MarkovJunior looks super cool.  I suspect there is a way to combine this with mk **
 MarkovJunior is a probabilistic programming language where programs are combinations of rewrite rules and inference is performed via constraint propagation. MarkovJunior is named after mathematician Andrey Andreyevich Markov, who defined and studied what is now called Markov algorithms. https://github.com/mxgmn/MarkovJunior
@@ -100,18 +116,43 @@ How to take an academic CS/PL paper and translate the rules to miniKanren, and p
 
 how to deal with scope and binding: environments, De Bruijn, locally nameless, combinatory logic, nominal unification/equivariant unification, HOAS, nominal sets, etc.
 
+How to get mk to not just generate similar "boring" answers when performing synthesis (lots of ways to attempt this)
+
+standard synthesis techniques + trying to apply them to mk synthesis (for example, canonical versions of expressions, per-hole type or grammar restrictions, etc.
+
 trace how Kanren and miniKanren have changed over time, along with other miniKanren-like languages, such as core.logic and OCanren.  Document the languages.  Look at the implementations.
 
 revisit https://github.com/webyrd/declarative-semantics
 miniKanren prototype of version v2 of 'Declarative semantics for functional languages: compositional, extensional, and elementary' by Jeremy Siek.
 
+revisit meta-circular-interp-in-mk: Simple Scheme interpreter, running inside a relational Scheme interpreter written in miniKanren, running inside of Scheme. It's...a little slow.
+https://github.com/webyrd/meta-circular-interp-in-mk
+Good candidate (and test case) for staged evaluation!
+
+look closely at utah-minikanren-summer-school, especially Jason's (and Dan's?) mk-convert.pdf (https://github.com/webyrd/utah-minikanren-summer-school/blob/master/mk-convert.pdf)
+https://github.com/webyrd/utah-minikanren-summer-school
+
 relational macro expander:
 * fexprs
 * hygienic Scheme macros
 
+revisit mk-interpreter-with-term-size: miniKanren relational interpreter with term size argument
+https://github.com/webyrd/mk-interpreter-with-term-size
+also look closely at Petr Lozov's work, which is much more sophisticated
+
+revisit Igor Wiedler's relational Turing Machine, ported from core.logic to miniKanren.
+https://github.com/webyrd/igors-turing-machine
+
+revisit mad-at-x miniKanren/cKanren take on adatx (Automatic Design of Algorithms Through X) main example (at https://github.com/LudoTheHUN/adatx)
+https://github.com/webyrd/mad-at-x
+CLP(SMT) candidate
+
 environment trimming; memory management for logic programming
 
 McCarthy's `amb`
+
+Take a look at ElephantKanren again.  Anything here of interest?
+https://github.com/webyrd/elephantKanren
 
 even vs. odd streams
 streams vs. 2-continuation (sk & fk) model of backtracking
@@ -385,6 +426,30 @@ N ways to perform arithemetic relationally
 * CLP(Z)
 * CLP(SMT)
 * delayed goals
+
+revisit A Relational Exploration of the Chomsky Hierarchy (SL 2013 with Dan)
+https://www.infoq.com/presentations/chomsky-hierarchy/
+https://github.com/webyrd/strange-loop-2013
+Some cool code here!  Like HO PDA
+
+revisit TAPL in mk/core.logic/etc
+https://github.com/webyrd/TAPL-in-miniKanren-cKanren-core.logic
+
+revisit MU-problem: Hofstadter's MU problem (http://en.wikipedia.org/wiki/MU_puzzle) in miniKanren. Straight-forward implementation based on the appendo relation.
+https://github.com/webyrd/MU-puzzle
+would CLP(Set) help? staging?
+
+revisit set-constraints: Stolzenburg-style set constraints for miniKanren
+https://github.com/webyrd/set-constraints
+how does this compare with Nada's and Claire's work on set constraints in mk?
+
+revisit pcpo
+Post Correspondence Problem (PCP) in miniKanren
+Written with Tony Tuttle.
+https://github.com/webyrd/pcpo
+
+relational interpretation of copy_term??
+Joe Near's encoding in alphaLeanTAP
 
 tree automata
 e-graphs
