@@ -55,6 +55,29 @@ TODO look at draft papers, my private repos, TiddlyWiki, etc.  Some of this will
 ** MarkovJunior looks super cool.  I suspect there is a way to combine this with mk **
 MarkovJunior is a probabilistic programming language where programs are combinations of rewrite rules and inference is performed via constraint propagation. MarkovJunior is named after mathematician Andrey Andreyevich Markov, who defined and studied what is now called Markov algorithms. https://github.com/mxgmn/MarkovJunior
 
+interesting looking mk variants on miniKanren.org website:
+*  microKanren with temporal logic programming (https://github.com/nathanielrb/ftmicroKanren)
+Related to an earlier, similar implementation (https://github.com/nathanielrb/tmicroKanren)
+*  microKanren implementation using Martelli-Montanari unification algorithm
+(404)
+* semiKanren
+Logic programming using semiunification for R-ASUP instances (404 error)
+* rKanren
+Cameron Swords and Daniel P. Friedman. 
+rKanren: Guided Search in miniKanren.
+In Proceedings of the 2013 Workshop on Scheme and Functional Programming (Scheme '13), Alexandria, VA, 2013.
+https://github.com/cgswords/rkanren
+* CLP(SMT) Kanren
+https://github.com/namin/clpsmt-miniKanren
+*  staged miniKanren
+explorations of multi-stage logic programming in miniKanren
+https://github.com/namin/staged-miniKanren
+* staticKanren
+A variant of miniKanren which returns better answers. The documentation is here: https://github.com/lackhoa/Thesis/blob/master/Thesis.pdf
+Khoa Vo
+Relational conditionals with pseudo-functions \else Firewall analysis assistant in miniKanren: Techniques in miniKanren
+https://github.com/lackhoa/staticKanren
+
 Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
 * Prolog
 * Datalog
@@ -336,6 +359,12 @@ meta-circular miniKanren interpreter.
 https://github.com/webyrd/relational-unifier
 Relational unifier, implemented in miniKanren
 metaKanren with Bharath
+
+Martelli-Montanari unification algorithm
+composable, monotonic, functional representation of substitutions
+(vs. triangular substitutions, for example)
+union-find algorithm and data structure
+Ramana Kumar's mechanized proof that mk unification using walk and triangular substitutions converges -- difficult, since the algorithm isn't primitive recursive/doesn't have a monotonically decreasing measure on an argument
 
 mk pretty printer
 A super simple pretty printer for miniKanren, designed for live coding. See the bottom of the file for example usage. Don't forget to load miniKanren before using!

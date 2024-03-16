@@ -8,6 +8,8 @@ Spent 30 minutes adding to the topics I might want to talk about in AIWOIF, base
 
 Finished going through my public GitHub repos, looking for miniKanren-related repos and topics.
 
+Began going through miniKanren.org to collect more ideas and implementations and documents
+
 ## Friday, March 15, 2024
 
 ### Session 1
