@@ -250,6 +250,7 @@ matche
 duals of unification
 
 anti-unification
+https://github.com/webyrd/anti-unification
 
 CLP(Tree)
 =/=
@@ -289,6 +290,21 @@ CPS
 trampolining
 registerization
 
+meta interpreters in mk
+Playing with meta-interpreters in miniKanren. Inspired by Nada Amin's miniKanren confo talk at Clojure/West:
+https://github.com/webyrd/meta-interp
+also, the paper with Nada and Tiark -- Scalagno, etc.
+revisit Prolog-style meta-interpreters and relationality
+
+CPS
+Explorations of Continuation-Passing Style in miniKanren.
+https://github.com/webyrd/mk-cps
+MB approach to reconnecting the wires, and the limits of that approach
+delimited continuations and effect handlers -- do they provide more structure that prevents "breaking the wires" problems?
+
+Relational implementation of the CESK machine
+https://github.com/webyrd/relational-cesk
+
 WiljaEdit relational transformation-based structured editor
 
 first-order miniKanren
@@ -303,9 +319,40 @@ reflective tower of relational interpreters, in which one level can reach up and
 
 miniKanren quines -- mk `run` expressions that generate themselves -- try to generate using mk-in-mk (Michael Ballantyne has constructed these by hand)
 
+2012 Scheme Workshop quines code (and paper)
+https://github.com/webyrd/2012-scheme-workshop-quines-paper-code
+
+relational-parsing-with-derivatives
+https://github.com/webyrd/relational-parsing-with-derivatives
+
+relational-progress-sensitive-security
+https://github.com/webyrd/relational-progress-sensitive-security
+Relational implementation of type system and semantics from "Precise Enforcement of Progress-Sensitive Security" by Moore, Askarov, and Chong, CCS'12:
+
 meta-miniKanren
 https://github.com/michaelballantyne/meta-minikanren
-metaKanren
+https://github.com/webyrd/mk-metacircular-interp
+meta-circular miniKanren interpreter.
+https://github.com/webyrd/relational-unifier
+Relational unifier, implemented in miniKanren
+metaKanren with Bharath
+
+mk pretty printer
+A super simple pretty printer for miniKanren, designed for live coding. See the bottom of the file for example usage. Don't forget to load miniKanren before using!
+https://github.com/webyrd/miniKanren-pretty-printer
+
+cKanren
+https://github.com/webyrd/cKanren
+https://github.com/calvis/cKanren
+also, Kraken
+
+slpKanren
+Stochastic Logic Programs (SLP) style probabilistic logic programming in miniKanren, based on Stephen Muggleton's paper, 'Stochastic Logic Programs': http://www.doc.ic.ac.uk/~shm/Papers/slp.pdf
+Code by Rebecca Swords and William E. Byrd, based on core miniKanren.
+https://github.com/webyrd/slpKanren
+
+Lattice-based miniKanren, inspired by the lambda-LVars work of Lindsey Kuper and Ryan Newton (https://www.cs.indiana.edu/~lkuper/papers/2012-lambdaLVar-draft.pdf).
+https://github.com/webyrd/latticeKanren
 
 visualizing the search space
 
@@ -381,6 +428,18 @@ GEB MIU interpreter -- I think I have a GitHub repo on this, with a U of Utah st
 
 relational automata -- tabling, e-graphs, VSA, etc. -- try to recapture decidability and the ideal complexity classes, when the problems are deciadable (or in a mode in which everything should be decidable)
 
+mutally recursive relations to represent automta
+https://github.com/webyrd/automata-and-mutual-recursion
+add tabling, etc.
+separate representation of the language from the automata themselves
+staging
+etc.
+
+relational-dfa
+Relational deterministic finite automaton interpreter, written in miniKanren.
+https://github.com/webyrd/relational-dfa
+(also play with NFA versions)
+
 revisit Oleg's proofs in the purely relational arithmetic FLOPS paper; alternative representation of these numerals; tree constraints, e-graphs, etc.  sharing, tabling, etc.?  Hilbert's 10th problem
 
 Hindley-Milner type inference; `let` polymorphism -- how best to represent?  complexity classes; principal typing; have we ever solved these issues satisfactorily?
@@ -448,12 +507,27 @@ Post Correspondence Problem (PCP) in miniKanren
 Written with Tony Tuttle.
 https://github.com/webyrd/pcpo
 
-relational interpretation of copy_term??
+relational interpretation of copy_term
+why is it tricky?  does it even make sense?
+https://github.com/webyrd/copyo
+https://github.com/webyrd/templateo
+https://github.com/webyrd/typeo (Simple DSL for writing even simpler type inferencers. Uses cKanren's new templateo constraint, which is essentially a lazy, declarative version of Prolog's copy_term/2.)
 Joe Near's encoding in alphaLeanTAP
 
 tree automata
 e-graphs
 version space algebras
+
+fix up alphaKanren
+equivariant unification
+lambda Prolog/lambda Kanren/HOAS
+De Bruijn
+combinatory logic
+
+revisit https://github.com/webyrd/peano-challenge
+A simple relational Scheme integer to peano translator, demonstrating finite domain constraints.
+Inspired by a Twitter challenge from @mrb_bk:
+Who can show me a relational version of a (peano n) function that returns peano numbers like (peano 3) -> (:s (:s (:s 0)))
 
 program synthesis -- try implementing various synthesis algorithms
 
