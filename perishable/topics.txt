@@ -21,6 +21,8 @@ What other behaviors in which we perform a conjunction of multiple interpreters 
 * Generation of simple multi-language quines using relational interpreters for two Scheme-like languages. (https://github.com/webyrd/multi-quine)
 Is this (or similar) behavior(s) seen in other contexts?
 
+describe challenges, such as relational set_of, relational copy_term, small-step with fail-fast behavior, commutative conjunction, dealing with errors/exceptions, dealing with negative information, etc., -- descibe common themese, challenges, approaches, tradeoffs in relational programming/miniKanren
+
 The challenges of conjunction
 revisit cartesian-evalo: Cartesian product of multiple evalos
 https://github.com/webyrd/cartesian-evalo
@@ -31,6 +33,11 @@ Build Your Own Barliman
 
 A Course of Instruction in Programming Languages, Relational Style (interpreters, type checkers/inferencers, semantics, computability theory, proof checkers, automated theorem provers, compilers, etc., all explored from a relational point of view; think of ideas found in EoPL, TAPL, SICP, TLS, Sipser, Nilson and Nilson semantics book, <add your own programming languages textbook here>, relational style)
 
+mk meets modern machine learning, neural nets, LLMs, etc.
+
+AM, Eurisko, BAT, Doyle, Advice Taker, etc., in mk
+
+virtual Scheme student in mk
 
 # Assorted topics (some of these may be promoted to Arcs, and moved above)
 
@@ -52,8 +59,98 @@ TODO look at mk Workshop papers
 
 TODO look at draft papers, my private repos, TiddlyWiki, etc.  Some of this will have to be off-camera.
 
+TODO create annotated bibliography of mk-related and relational books and papers and talks or whatever
+
+what can mk learn from core.logic and OCanren?
+
 ** MarkovJunior looks super cool.  I suspect there is a way to combine this with mk **
 MarkovJunior is a probabilistic programming language where programs are combinations of rewrite rules and inference is performed via constraint propagation. MarkovJunior is named after mathematician Andrey Andreyevich Markov, who defined and studied what is now called Markov algorithms. https://github.com/mxgmn/MarkovJunior
+
+relational LL parsing, LALR parsing, etc.
+Post tag systems
+
+sokuza-kanren in miniKanren
+http://okmij.org/ftp/Scheme/sokuza-kanren.scm
+
+explore Recursive miniKanren by Hirotaka Niitsuma, which produces answers for some queries that would otherwise fail or diverge (I'm not sure which) due to their recursive nature.  (Is this similar to rational infinite trees in Prolog II?)
+https://github.com/niitsuma/Racket-miniKanren/tree/recursive
+https://niitsuma.hatenadiary.org/entry/20081113/1372410009
+
+explore sKanren: A multi-threaded cKanren with fair conj
+https://github.com/mio-19/sKanren
+
+explore 'Datalog in minikanren'
+https://github.com/rntz/minikanren-datalog
+
+explore DataFun from a relational perspective
+https://github.com/rntz/datafun
+and fixflow
+https://github.com/rntz/fixflow
+Investigating recursive dataflow for computing fixed points 
+
+explore roxanren: An experimental fusion of miniKanren and Rosette.
+https://github.com/femtomc/roxanren
+
+explore async-mu-kanren: Proof-of-concept implementation of muKanren using CSP (core.async)
+https://github.com/halgari/async-mu-kanren
+
+explore HaskellKanren
+HaskellKanren is an implementation of the Kanren language described in Daniel P. Friedman, William Byrd, and Oleg Kiselyov's The Reasoned Schemer (MIT Press, 2005). This project was created as the final project for Amr Sabry's CSCI-B490 Advanced Functional Programming course by Carlo Angiuli, Adam Foltzer, and Jaimie Murdock.
+https://github.com/JaimieMurdock/HK
+
+explore
+HOuKanren
+A twist to uKanren to support Higher-Order Relational Programming.
+https://github.com/kyagrd/houkanren
+
+explore lambdaKanren
+https://icfp20.sigplan.org/details/minikanren-2020-papers/7/-Kanren-Higher-order-Logic-Programming-with-Shallow-Embedding
+
+explore kanrenLight (in HOL Light), which looks very fancy indeed
+https://github.com/massimo-nocentini/kanren-light
+
+explore mk in Idris:
+idris-microKanren
+Simple microKanren implementation in Idris. Translated from Michael Sullivan's Haskell implementation.
+https://github.com/joom/idris-microKanren
+
+explore mk in J
+https://github.com/Rscho314/mk
+
+explore mk in Javascript with visualization
+JavaScript
+veneer http://tca.github.io/veneer/editor.html
+Browser based miniKanren editor and REPL, with constraints.
+GitHub repo https://github.com/tca/veneer
+microScopeKanren https://github.com/asolove/microScopeKanren
+A JavaScript implementation of microKanren with a focus on inspecting programs as they run.
+Example, vizualizing appendo https://www.adamsolove.com/microScopeKanren/
+mu-kanren http://functorial.com/mu-kanren/
+A step-by-step MicroKanren evaluator.
+GitHub repo https://github.com/paf31/mu-kanren
+
+explore LilKanren in Julia
+Welcome to lilinjn's[1] Institute for Search Research!
+https://github.com/habemus-papadum/LilKanren.jl
+
+explore the very interesting looking LogikalDB Foundational reactive logical database in Kotlin
+https://github.com/MechaRex/logikaldb
+
+explore Mímir
+https://github.com/hraberg/mimir/blob/master/README.md
+
+explore latticeKanren: Demo of lattice-based constraint logic programming (ML)
+https://github.com/eupp/LatticeKanren
+
+explore Moxy (Moxie?) kanren
+https://github.com/rntz/moxy/blob/master/kanren.mox
+
+explore MiniKanren in Lisp in Prolog. Accompanies the Technical Interview
+https://aphyr.com/posts/354-unifying-the-technical-interview
+https://gist.github.com/aphyr/4d41e7655b10a68e753f729bdc1c5a6d
+
+LINCOS universal language for communication, which can describe itself, relational style
+(similarly for Jake Beal's work under GJS)
 
 interesting looking mk variants on miniKanren.org website:
 *  microKanren with temporal logic programming (https://github.com/nathanielrb/ftmicroKanren)
@@ -65,8 +162,11 @@ Logic programming using semiunification for R-ASUP instances (404 error)
 * rKanren
 Cameron Swords and Daniel P. Friedman. 
 rKanren: Guided Search in miniKanren.
-In Proceedings of the 2013 Workshop on Scheme and Functional Programming (Scheme '13), Alexandria, VA, 2013.
 https://github.com/cgswords/rkanren
+* rank-Kanren
+Why rank is important?
+The parametrization is beneficial if we want to take advantage of differentiable programming to guide the search strategies. Think of Deep Neural Networks that are trained to generate appropriate ranks based on a fixed given puzzle. You can play with sudoku example using the included jar file.
+https://github.com/azarafrooz/rank-Kanren
 * CLP(SMT) Kanren
 https://github.com/namin/clpsmt-miniKanren
 *  staged miniKanren
@@ -131,6 +231,12 @@ program transformations, from a relational perspective:
 
 What makes a program relational?  What does that mean?  How can you tell if a program is relational?
 
+set_of, bag_of, and relationality/non-relationality of
+stratified queries
+mk-in-mk as an approach to stratified queries (for how many levels deep do you keep getting expressive power? **) **
+
+can we do relational copy_term through mk-in-mk, of through Scheme in mk?!?! **
+
 How to translate a Prolog program to miniKanren.  How to deal with the nasty bits of Prolog that aren't relational
 
 How to deal with the nasty bits of a Scheme program you want to translate to miniKanren
@@ -143,7 +249,22 @@ How to get mk to not just generate similar "boring" answers when performing synt
 
 standard synthesis techniques + trying to apply them to mk synthesis (for example, canonical versions of expressions, per-hole type or grammar restrictions, etc.
 
+explore  miniKanren-coq: A certified semantics for relational programming workout.
+https://github.com/dboulytchev/miniKanren-coq
+
+explore crystal-kanren
+https://github.com/jemc/crystal-kanren
+
+explore gologic, which seems to have some interesting extensions to mk
+https://github.com/hiredman/gologic
+
 trace how Kanren and miniKanren have changed over time, along with other miniKanren-like languages, such as core.logic and OCanren.  Document the languages.  Look at the implementations.
+
+look at the paper: Combining Unification and Disunification Algorithms -- Tractable and Intractable Instances
+Klaus U. Schulz
+Publication Date: 	1996
+Type of Publication: 	Veröffentlichungen in der Reihe CIS-Berichte
+https://www.cis.uni-muenchen.de/otherpublications/cis_berichte/cis-96-099.html
 
 revisit https://github.com/webyrd/declarative-semantics
 miniKanren prototype of version v2 of 'Declarative semantics for functional languages: compositional, extensional, and elementary' by Jeremy Siek.
@@ -358,6 +479,10 @@ https://github.com/webyrd/mk-metacircular-interp
 meta-circular miniKanren interpreter.
 https://github.com/webyrd/relational-unifier
 Relational unifier, implemented in miniKanren
+micro-in-mini: an implementation of a microKanren(-like language) in miniKanren
+https://github.com/jasonhemann/micro-in-mini
+muko: microKanren in miniKanren
+https://github.com/jpt4/muko
 metaKanren with Bharath
 
 Martelli-Montanari unification algorithm
