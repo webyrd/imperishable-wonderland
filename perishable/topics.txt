@@ -205,7 +205,75 @@ https://github.com/jpt4/skio
 * kibit: There's a function for that!
 kibit is a static code analyzer for Clojure, ClojureScript, cljx and other Clojure variants. It uses core.logic to search for patterns of code that could be rewritten with a more idiomatic function or macro. For example if kibit finds the code
 https://github.com/clj-commons/kibit
+* expresso: A clojure library for symbolic manipulation of Algebraic Expressions.
+https://github.com/clojure-numerics/expresso?tab=readme-ov-file
 
+Papers to revisit
+*  Molly Q Feldman, Yiting Wang, William E. Byrd, François Guimbretière, and Erik Andersen.
+Towards Answering "Am I On the Right Track?" Automatically using Program Synthesis.
+In SPLASH-E 2019.
+https://www.feldmanmolly.com/splashe2019.html
+https://www.feldmanmolly.com/splashe2019.pdf
+* Lisa Zhang, Gregory Rosenblatt, Ethan Fetaya, Renjie Liao, William E. Byrd, Matthew Might, Raquel Urtasun, and Richard Zemel.
+Neural Guided Constraint Logic Programming for Program Synthesis.
+In Advances in Neural Information Processing Systems 31 (NeurIPS 2018), 2018.
+Paper and poster
+Full proceedings
+https://neurips.cc/Conferences/2018/Schedule?showEvent=11187
+* Peter Kourzanov
+Bidirectional parsing: a functional/logic perspective
+In 2014 International Symposium on Implementation and Application of Functional Language (IFL 2014), Boston, MA, October, 2014.
+https://ifl2014.github.io/submissions/ifl2014_submission_18.pdf
+*  Daniel Brady, Jason Hemann and Daniel P. Friedman
+Little Languages for Relational Programming.
+In Proceedings of the 2014 Workshop on Scheme and Functional Programming (Scheme '14), Washington, DC, 2014.
+Complete source code (Scheme)
+https://github.com/dabrady/LittleLogicLangs
+https://www.schemeworkshop.org/2014/papers/Brady2014.pdf
+*  Erik Wennstrom
+Tableau-Based Model Generation for Relational Syllogistic Logics.
+In Proceedings of the 2014 International Symposium on Artificial Intelligence and Mathematics (ISAIM 2014), Fort Lauderdale, FL, January, 2014.
+* Cameron Swords and Daniel P. Friedman. 
+rKanren: Guided Search in miniKanren.
+In Proceedings of the 2013 Workshop on Scheme and Functional Programming (Scheme '13), Alexandria, VA, 2013.
+Complete source code (Scheme)
+http://webyrd.net/scheme-2013/papers/Swords2013.pdf
+https://github.com/cgswords/rkanren
+* Claire E. Alvis, Jeremiah J. Willcock, Kyle M. Carter, William E. Byrd, and Daniel P. Friedman. 
+cKanren: miniKanren with Constraints.
+In Proceedings of the 2011 Workshop on Scheme and Functional Programming (Scheme '11), Portland, OR, 2011.
+Complete source code (R6RS Scheme)
+https://www.schemeworkshop.org/2011/papers/Alvis2011.pdf
+https://github.com/calvis/cKanren
+Complete source code (R6RS Scheme)
+* Ramana Kumar and Michael Norrish
+(Nominal) unification by recursive descent with triangular substitutions
+In Proceedings of the First international conference on Interactive Theorem Proving (ITP'10),
+Springer-Verlag Berlin, pp. 51-66, 2010.
+https://trustworthy.systems/publications/nicta_full_text/3724.pdf
+* Joseph P. Near, William E. Byrd and Daniel P. Friedman.
+alphaleanTAP: A Declarative Theorem Prover for First-Order Classical Logic.
+In Proceedings of the 24th International Conference on Logic Programming (ICLP 2008),
+LNCS vol. 5366, Springer-Verlag, Heidelberg, pp. 238-252, 2008.
+Complete source code--R6RS Scheme and Prolog (.zip file)
+http://webyrd.net/alphaleantap/alphatap.pdf
+http://webyrd.net/alphaleantap/alphaleanTAP.zip
+* Oleg Kiselyov, William E. Byrd, Daniel P. Friedman and Chung-chieh Shan
+Pure, declarative, and constructive arithmetic relations (declarative pearl).
+In Proceedings of the 9th International Symposium on Functional and Logic Programming,
+ed. Jacques Garrigue and Manuel Hermenegildo, pp. 64-80.
+LNCS vol. 4989, Springer, 2008.
+http://webyrd.net/arithm/arithm.pdf
+* William E. Byrd and Daniel P. Friedman 
+alphaKanren: A Fresh Name in Nominal Logic Programming.
+In Proceedings of the 2007 Workshop on Scheme and Functional Programming,
+Universite Laval Technical Report DIUL-RT-0701, pp. 79-90.
+Authors' revised version (recommended)
+Revised source code (R5RS Scheme)
+http://webyrd.net/alphamk/alphamk_workshop.pdf
+http://webyrd.net/alphamk/alphamk.pdf
+https://github.com/webyrd/alphaKanren
+* 
 
 Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
 * Prolog
