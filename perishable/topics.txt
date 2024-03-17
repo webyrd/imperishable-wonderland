@@ -149,6 +149,16 @@ explore MiniKanren in Lisp in Prolog. Accompanies the Technical Interview
 https://aphyr.com/posts/354-unifying-the-technical-interview
 https://gist.github.com/aphyr/4d41e7655b10a68e753f729bdc1c5a6d
 
+revisit Scalagno
+https://github.com/namin/scalogno
+
+explore Shen miniKanren:
+shen-minikanren
+https://github.com/mthom/shen-minikanren
+
+explore SmallKanren: Logic Programming in Pharo Smalltalk
+https://github.com/emdonahue/SmallKanren
+
 LINCOS universal language for communication, which can describe itself, relational style
 (similarly for Jake Beal's work under GJS)
 
@@ -177,6 +187,25 @@ A variant of miniKanren which returns better answers. The documentation is here:
 Khoa Vo
 Relational conditionals with pseudo-functions \else Firewall analysis assistant in miniKanren: Techniques in miniKanren
 https://github.com/lackhoa/staticKanren
+
+projects using mk or whatever to revisit:
+* minimips
+minikanren mips assembler/disassembler
+https://github.com/orchid-hybrid/minimips
+* mk rewrite completion
+This project contains source for reports and code researching the use of term rewriting algorithms and considerations (e.g. Knuth-Bendix) in miniKanren.
+https://github.com/brandonwillard/mk-rewrite-completion
+* Relational Lsplines: Relational logic programming and form parameter design (Relational Ship Hull Geometric Design Generation)
+https://github.com/LukeMcCulloch/feasible-form-parameter-design
+* Mkanren automata in mk
+https://github.com/bboskin/Mkanren
+* A Relational SKI Combinator Calculus Interpreter
+(compare with my efforts)
+https://github.com/jpt4/skio
+* kibit: There's a function for that!
+kibit is a static code analyzer for Clojure, ClojureScript, cljx and other Clojure variants. It uses core.logic to search for patterns of code that could be rewritten with a more idiomatic function or macro. For example if kibit finds the code
+https://github.com/clj-commons/kibit
+
 
 Logic programming approaches of different expressive power, and with different semantics (especially regarding negation), termination guarantees, and complexity classes.  Explore the mk equivalents as well.
 * Prolog

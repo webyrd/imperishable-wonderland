@@ -2,6 +2,12 @@
 
 ## Saturday, March 16, 2024
 
+### Session 4
+
+Spent 30 minutes adding to the topics I might want to talk about in AIWOIF, based on the notes on my phone and on my notepad, GitHub repos, miniKanren Workshop papers, etc.
+
+Going through miniKanren.org to collect more ideas and implementations and documents
+
 ### Session 3
 
 Spent 30 minutes adding to the topics I might want to talk about in AIWOIF, based on the notes on my phone and on my notepad, GitHub repos, miniKanren Workshop papers, etc.
