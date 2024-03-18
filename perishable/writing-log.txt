@@ -1,5 +1,11 @@
 # Writing Log
 
+## Sunday, March 17, 2024
+
+Today I went through my private GitHub and BitBucket repos, and went through private repos on my laptop.  I didn't record this work, since some of the repos are for unpublished work with collaborators, etc.
+
+I still have to write up about 50 repos on my laptop.  ~20 years of hacking with collaborators adds up!
+
 ## Saturday, March 16, 2024
 
 ### Session 5
@@ -70,17 +76,13 @@ Spent 30 minutes adding to the topics I might want to talk about in AIWOIF, base
 
 Spent 30 minutes adding to the topics I might want to talk about in AIWOIF, based on the notes on my phone and on my notepad.
 
-
 ## Tuesday, March 12, 2024
-
 
 ### Session 2
 
 Switched from LaTeX to Markdown and Pandoc.  I want to do this to keep from ending up with a format (PDF or complex LaTeX/BibTeX/etc) that is hard to read or manipulate, and hard to translate to other formats.
 
 The switch to Markdown and Pandoc seemed painless enough.  I'll have to get used to giving up some control over formatting.  The extended Pandoc version of Markdown has special features that might prove useful.  I updated the Makefile to generate a PDF version of the document from the Markdown.  I could also do more fancy LaTeX generation, but I'll defer that for now.
-
-
 
 ### Session 1
 
@@ -93,3 +95,7 @@ Created a new file `contents.txt` in the `images` directory that contains the co
 Added a `README.md` file for the book in the `imperishable` directory, and included the Creative Commons CC BY Attribution 4.0 International license for the book and said that the code was under an MIT license, but to check the code for details.
 
 Added the Creative Commons CC BY Attribution 4.0 International license to a new page in the book itself.  Created a new `macros.tex` file to contain handy LaTeX macros, such as the `wspace` (Will's Space) macro to give just a tiny bit of vertical spacing.
+
+## Monday, March 11, 2024
+
+Created repository, and created initial outline and files.
