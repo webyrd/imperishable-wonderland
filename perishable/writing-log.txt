@@ -1,5 +1,15 @@
 # Writing Log
 
+## Monday, March 18, 2024
+
+This morning I woke up early and finished going through the private repos on my laptop.
+
+I now have a list of interesting private repos on GitHub, BitBucket, and my laptop, with short descriptions of their contents.
+
+I need to: (1) figure out which of these I can add to the public `ideas.txt` file; (2) triage the public ideas; (3) triage the private ideas.
+
+This is taking longer than I had hoped for, although it's actually only been a week since I started this repo and writing log.  I need to remind myself of 'TTT' from Piet Hein's 'Grooks': Things Take Time.
+
 ## Sunday, March 17, 2024
 
 Today I went through my private GitHub and BitBucket repos, and went through private repos on my laptop.  I didn't record this work, since some of the repos are for unpublished work with collaborators, etc.
