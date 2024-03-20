@@ -1,5 +1,11 @@
 # Writing Log
 
+## Tuesday, March 19, 2024
+
+Today I had many stimulating conversations regarding logic, logic programming, functional programming, machine learning, search, etc.  I've recorded many of these ideas in my private topics file.  I'll think about which I can make public.  I plan to start triaging topics, public and private, soon.
+
+Looking forward to making more videos soon.
+
 ## Monday, March 18, 2024
 
 This morning I woke up early and finished going through the private repos on my laptop.
