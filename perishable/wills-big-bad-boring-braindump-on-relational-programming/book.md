@@ -16,7 +16,13 @@ I started the book on Friday, March 22, 2024.  I have started working on another
 
 # The writing philosophy behind this book
 
-Get it done!  "Write poorly, proudly!" [TODO <- something like that --- find exact quote in the Film Courage video I linked to in a recent video; add reference]  Get all the ideas in my head down on paper as quickly as possible.  "The worst finished book is better than the best unfinished book" [TODO <- something like that --- find exact quote in the Film Courage video I linked to in a recent video; add reference]
+Get it done!
+
+"Write badly, with pride" -- Eric Edson, Film Courage interview (https://www.youtube.com/watch?v=V6Yql0jrjow at 19:00)
+
+I remembered this as "Write poorly, proudly!", which I prefer slightly.)
+
+Get all the ideas in my head down on paper as quickly as possible.  "The worst finished book is better than the best unfinished book" [TODO <- something like that --- find exact quote in the Film Courage video I linked to in a recent video; add reference]
 
 Dean Wesley Smith's notion of working at "pulp speed" also inspires me to write a book "into the dark" [TODO <- something like that --- find exact phrase in DWS book; add reference]  Just sit down and start typing!
 
