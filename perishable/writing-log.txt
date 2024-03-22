@@ -2,6 +2,10 @@
 
 ## Friday, March 22, 2024
 
+Writing session 2
+
+Added topics and a super-rough outline for parts of the Big Bad Braindump.
+
 Writing session 1
 
 Created new book, 'Will's Big Bad Boring Braindump on Relational Programming', which I intend to worrk on at the same time as 'An Imperishable Wonderland of Infinite Fun'.  This book, as advertised, is intended to be a giant, semi-organized (at best!) braindump of everything I know about relational programming and miniKanren.  Hence, the book is located in the `perishable` subdirectory of this repository.

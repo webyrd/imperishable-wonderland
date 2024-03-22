@@ -34,5 +34,291 @@ miniKanren is a family of constraint logic programming languages, each of which 
 
 Most miniKanrens are implemented as *embedded domain-specific languages* (EDSLs), meaning that they extend some *host language* with additional functions, methods, etc., supporting the miniKanren language, along with an implementation in the host language of a constraint logic reasoning engine.  Historically miniKanren has been implemented in variants of Lisp (for example, Scheme, Racket, and Clojure) or other functional languages (OCaml and Haskell).  There has also been some work on implementing miniKanren as a stand-along language and run-time.
 
-# Truth versus success
+# What is microKanren?
+
+microKanren (also written "muKanren" or "muKanren" [TODO change to Greek 'mu' character]) is a minimal version of miniKanren
+
+[original paper includes a tutorial reconstruction, inclusing a step-by-step reconstruction of how to arrive at the interleaving search strategy, given how simpler search strategies can't find answers that exist in infinite search spaces]
+
+[core impl is ~50 lines of Scheme]
+
+[easily ported to other languages; has been implemented hundeds or thousands of times in dozens of host languages --- so many that we gave up keeping track years ago]
+
+[standard exercise on learning miniKanren is to implement microKanren]
+
+[cleanly separates functions from macros/syntax --- can build a miniKanren on top of it]
+
+# What are the supposed advantages of relational programming?
+
+# What are the supposed disadvantages of relational programming?
+
+# What are the major research themes in relational programming?
+
+# What is a "relational interpreter"?
+
+# What are the major implementations of miniKanren-inspired languages?
+
+# What are experimental implementations of miniKanren-inspired languages under development?
+
+## OCanren
+
+## probKanren
+
+## alphaKanren
+
+# What are the main learning resources for miniKanren and relational programming?
+
+# What are the main resources for someone wanting to learn about miniKanren and/or relational programming from a research perspective?
+
+# What came before miniKanren?
+
+# How has miniKanren changed over time?
+
+# What is the difference between logic programming, constraint programming, constraint logic programming, and relational programming?
+
+# Truth versus success/failure
+
+[gets into why negation can be tricky]
+
+# Many-world's interpretation of logic programming
+
+[includes the OS processes view]
+
+# Prolog
+
+## Standard resources for learning Prolog
+
+## Cool things about Prolog
+
+### Prolog syntax
+
+### Prolog meta interpreters
+
+## Less cool things about Prolog (from the perspective of relational programming)
+
+### Prolog, purity, and the default language choices
+
+## Translating Prolog programs to miniKanren
+
+# Restrictions to logic programming
+
+[Datalog]
+
+[ASP]
+
+# Extensions to logic programming
+
+[higher-order unification and pattern matching]
+
+[lambdaProlog]
+
+[nominal logic programming]
+
+# Modes
+
+# Closed world vs. open world
+
+## CWA
+
+## OWA
+
+## train table example
+
+## Semantic Web, description logic, etc.
+
+# Negation and negative information
+
+## Negation as failure
+
+## Constraints and regstricted negation
+
+# Aggregation
+
+# setof, bagof, etc.
+
+relational implications of
+
+# Stratified queries
+
+# Nested `run`
+
+# Stratified negation
+
+# Relational programing techniques
+
+## Relational arithmetic
+
+[TODO explore tradeoffs, laziness, domains, floundering, supported operations, etc.]
+
+### passing a ground number as an argument and using normal arith operations
+
+### `project` and normal arithmetic operations --- allows for logic variables and unification, so long as the arithmetic operations aren't used on a fresh logic variable
+
+### delayed goals --- often can have some relational behavior, in that different "modes" can be supported: + and -, sin and arcsin, etc.
+
+### Peano, and how it is good for increment and decrement
+
+### "Oleg arithmetic" [TODO <- include FLOPS paper, Prolog version, mk version, talk about proofs, decidability, performance, lazy vs. non-lazy, partally-instantiated numerals and which numbers they can represent, etc.]
+
+### CLP(FD)  cKanren, core.lgic, etc.
+
+### CLP(Z)
+
+### CLP(R)
+
+### bit vector constraints  [TODO <- does this make sense?]
+
+### CLP(SMT)   different solvers and the theories they support, smt-lib, solvers with sin and cos, etc.
+
+# Various types of logic
+
+## Monotonic vs. non-monotonic reasoning
+
+## Nominal logic
+
+## Defeasible logic
+
+## Linear logic
+
+## Probabilistic logic
+
+## Temporal logic
+
+## Modal logic
+
+# Functional logic programming
+
+# Logic and constraint logic programming languages
+
+## miniKanren
+
+## Prolog
+
+## Datalog
+
+## Answer Set Programming
+
+## Problog
+
+## PRISM
+
+## Mercury
+
+## Verse/Verse Calculus -- similarity to Icon
+
+## Curry -- laziness and needed narrowing
+
+## Godel [TODO dots over the o] [TODO include the successor]
+
+## [TODO include other languages, esp. older ones]
+
+# Constraint solving
+
+## Modern view of traditional logic programming as CLP(Tree); Prolog 0 with disunification
+
+### disequality constraints --- H. Comon paper; Prolog 0 and Prolog II; not sure why the Prolog that caught on didn't seem to include disequality constraints
+
+## Modern Prologs support various constraint domains
+
+## CLP(X), typed or sorted logic variables, and combining constraints from various domains on a single variable
+
+# Search
+
+## DFS
+
+## BFS
+
+## IDFS
+
+## Interleaving search
+
+## Guided search
+
+### A* search
+
+### Neural-guided search
+
+### N-grams guided search
+
+### Probabilistic search: sequential MC, etc.
+
+# Unification
+
+## Variants of unification
+
+### First-order syntactic unification
+
+### Nominal unification and equivariant unification
+
+### Higher-order unification and higher-order pattern matching
+
+### Unification with segment variables [should this be thought of as a type of e-unification?]
+
+### E-unification
+
+#### ACI unification
+
+[representing subtyping etc. in unification and logic programming]
+
+# Relational parsing
+
+# Relational type checking and inference
+
+# The heachaches and how to deal with them:
+
+## Conjunction (ugh!!!)
+
+## Negation (ugh!!!)
+
+# Debugging
+
+("Computer says 'no'")
+
+# The art of cheating without being caught
+
+## Barliman interpreter hax
+
+# Data structures
+
+## Pairs and lists
+
+## Sets and CLP(Set)
+
+## ADTs
+
+## records
+
+# Program synthesis
+
+## e-graphs, VSA, tree autamata
+
+# Semantics of logic programming
+
+# Tabled evaluation
+
+# Term rewriting and term reduction
+
+## Confluence and Church-Rosser
+
+### Modified notion for Verse Calculus
+
+## Knuth-Bendix completion
+
+## Linear logic multiset rewriting
+
+# Things I'm excited about right now
+
+## machine learning for automated theorem proving and proof assistants, inspired by Alpha Go [TODO <- add CPP'24 talk] [TODO implement this!!!!]
+
+## Natural deduction [TODO implement this!!!!]
+
+## Sequent calculus [TODO <- add tutorial]
+
+## Incompleteness logics
+
+## Using sequent calculus to implement a type system proving an expression won't evaluate [TODO <- add POPL'24 reference] [TODO implement this!!!!]
+
+# Interesting things I know almost nothing about, but which seem relevant
+
+## monadic second-order logic
 
