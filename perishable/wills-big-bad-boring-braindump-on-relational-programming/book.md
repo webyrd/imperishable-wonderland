@@ -60,11 +60,11 @@ miniKanren can be thought of as a "lower level" language than Kanren---for examp
 
 ## Code from the second edition of 'The Reasoned Schemer' (2018)
 
-[point to the github repo]
+The code from the second edition of 'The Reasoned Schemer' can be found [here on GitHub](https://github.com/TheReasonedSchemer2ndEd/CodeFromTheReasonedSchemer2ndEd)
 
 ## Code from the first edition of 'The Reasoned Schemer' (2005)
 
-[point to the github repo]
+The code from the first edition of 'The Reasoned Schemer' can be found [here on GitHub](https://github.com/miniKanren/TheReasonedSchemer)
 
 ## The main differences between these implementations of miniKanren:
 
@@ -74,7 +74,7 @@ miniKanren can be thought of as a "lower level" language than Kanren---for examp
 
 # Where is the original code for Kanren, and early work on miniKanren?
 
-[point to the Kanren SourceForce]
+The original Kanren project, including documentation and code, can be found [here on SourceForce](https://kanren.sourceforge.net/)
 
 # Are there any interesting ideas from the original Kanren language, implementation, and examples?
 
