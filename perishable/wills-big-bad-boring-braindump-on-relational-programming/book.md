@@ -18,7 +18,7 @@ I started the book on Friday, March 22, 2024.  I have started working on another
 
 Get it done!
 
-"Write badly, with pride" -- Eric Edson, Film Courage interview (https://www.youtube.com/watch?v=V6Yql0jrjow at 19:00)
+"Write badly, with pride" -- Eric Edson, [Film Courage interview](https://www.youtube.com/watch?v=V6Yql0jrjow at 19:00)
 
 I remembered this as "Write poorly, proudly!", which I prefer slightly.)
 
@@ -42,17 +42,79 @@ Most miniKanrens are implemented as *embedded domain-specific languages* (EDSLs)
 
 # What is microKanren?
 
-microKanren (also written "muKanren" or "muKanren" [TODO change to Greek 'mu' character]) is a minimal version of miniKanren
+microKanren (also written "muKanren" or "muKanren" [TODO change to Greek 'mu' character]) is a minimal version of miniKanren created by Jason Hemann and Daniel P. Friedman [cite paper and github repo].  The original microKanren paper includes a tutorial reconstruction, including a step-by-step reconstruction of how to arrive at the interleaving search strategy, given how simpler search strategies can't find answers that exist in infinite search spaces.
 
-[original paper includes a tutorial reconstruction, inclusing a step-by-step reconstruction of how to arrive at the interleaving search strategy, given how simpler search strategies can't find answers that exist in infinite search spaces]
+microKanren is designed to be easily ported to other languages. The canonical core microKanren implementation is fewer than 50 lines of Scheme, and does use Scheme macros.  It is possible to implement miniKanren on top of microKanren, which is especially convenient in languages that supportsyntactic extension through macros (such as most Lisps, Rust, etc.).  A standard exercise for anyone learning miniKanren is to implement a version of microKanren in a host language of their choice.  As a result, microKanren has been implemented hundeds or thousands of times in dozens of host languages.  The main [miniKanren website](http://www.minikanren.org) contains links to many microKanren implementations---the website used to keep track of every microKanren implementation, but the number of implementations quickly became overwhelming.
 
-[core impl is ~50 lines of Scheme]
+# What is Kanren?  What are the similarities and differences between Kanren and miniKanren?
 
-[easily ported to other languages; has been implemented hundeds or thousands of times in dozens of host languages --- so many that we gave up keeping track years ago]
+Kanren is the language that came before, and inspired, miniKanren.  Like miniKanren, the canonical Kanren implementation is an embedded domain-specific language in Scheme, using a combination of functions and Scheme hygienic macros.  Like miniKanren, Kanren is based on first-order syntactic unification and a complete, interleaving search strategy.  Kanren programs are written at a "higher level" that miniKanren programs.  The notion of extending relations is a concept built into Kanren.  Unlike miniKanren, Kanren performs unification over the terms passed into a Kanren relation.  Kanren's implementation includes an optimization inspired by Prolog called `head-let`, which is metaphorically equivalent to `project`ing the terms that are passed into a relation.  Kanren uses pattern matching, and has syntax that is similar in spirit to the clauses in Prolog (at least if you squint).
 
-[standard exercise on learning miniKanren is to implement microKanren]
+miniKanren can be thought of as a "lower level" language than Kanren---for example, there is no notion of extending relations, or of pattern matching, built into miniKanren; since miniKanren is not based on pattern matching, there is no `head-let` optimization built into miniKanren.  miniKanren could be thought of as a simpler, lower-level language that a Kanren program might compile (or macro-expand) to, in the same way that a miniKanren program might compile (or macro-expand) to microKanren.
 
-[cleanly separates functions from macros/syntax --- can build a miniKanren on top of it]
+# What does the name 'Kanren' mean?  Where did the name come from?
+
+'Kanren' is the Japanese word for 'relation' [include kanji].  Oleg Kiselyov came up with the name.
+
+# Where is the code for the miniKanren implementation from 'The Reasoned Schemer'?  How do they differ?
+
+## Code from the second edition of 'The Reasoned Schemer' (2018)
+
+[point to the github repo]
+
+## Code from the first edition of 'The Reasoned Schemer' (2005)
+
+[point to the github repo]
+
+## The main differences between these implementations of miniKanren:
+
+* The miniKanren language in the first edition contains two versions of conjunction, disjunction, and unification: `conde` and `condi`; `fresh` and `freshi`; `==` and `==-check`.  The second edition simplifies the language, and uses only the "safe" (interleaving/occurs-check) versions: the `==` from the second edition is equivalent to `==-check`, the `code` from the second edition is equivalent to `condi`, and `fresh` from the second edition is equivalent to `freshi`.
+
+* The miniKanren implementation in the second edition is built on a modified version of microKanren.  As a result, there is a simple "core" language of binary disjunction and conjunction at the heart of the 2018 implementation.  Also, the syntactic forms (`run`, `fresh`, `conde`), which are implemented using Scheme hygienic macros, are cleanly separated from the underlying functions, to allow the implementation to be more easily understood by readers unfamiliar with Scheme hygienic macros, and to make it easier to port the non-macro parts of miniKarnen to other host languages that do not have macros or other syntactic abstraction mechanisms.
+
+# Where is the original code for Kanren, and early work on miniKanren?
+
+[point to the Kanren SourceForce]
+
+# Are there any interesting ideas from the original Kanren language, implementation, and examples?
+
+Yes, most definitely.  Kanren is underexplored at this point.
+
+[relational extension]
+
+[pattern matching syntax and `head-let`]
+
+[separation of facts from rules]
+
+[extended type inferencer and fixpoint trick]
+
+[mirror of mirror]
+
+[other theorem proving and equational reasoning goodness]
+
+Exercise: build a Kanren on top of miniKanren, complete with the Kanren syntax, `head-let`, etc.
+
+Exercise: replicate all the example applications in miniKanren, and extend/improve upon these examples
+
+Exercise: use the ideas from these example applications to explore other theorem-proving and equational-reasoning programs in Kanren/miniKanren
+
+# What are the tradeoffs of implementing miniKanren/microKanren as an embedded domain specific language?
+
+# What are the differences between miniKanren and other logic or constraint logic programming languages?
+
+# The Prolog elephant in the room
+
+## How does miniKanren differ from Prolog?
+
+## Can't you do all of this in Prolog?
+
+## Shouldn't you just be using Prolog?
+
+## Isn't miniKanren just warmed-up Prolog?
+
+## But Prolog is useful...
+
+## Etc.
 
 # What are the supposed advantages of relational programming?
 
@@ -86,7 +148,7 @@ microKanren (also written "muKanren" or "muKanren" [TODO change to Greek 'mu' ch
 
 [gets into why negation can be tricky]
 
-# Many-world's interpretation of logic programming
+# Many-worlds interpretation of logic programming
 
 [includes the OS processes view]
 
@@ -328,3 +390,13 @@ relational implications of
 
 ## monadic second-order logic
 
+
+% misc questions that need to be put somewhere
+
+# What does `conde` stand for?  Where did it come from?  Why does it resemble Scheme's `cond`?
+
+# What is environment trimming?  Does miniKanren implement environment trimming?
+
+# Is there an abstract machine for miniKanren?
+
+# Is there a formal semantics for miniKanren?
