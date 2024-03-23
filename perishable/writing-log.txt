@@ -2,6 +2,14 @@
 
 ## Friday, March 22, 2024
 
+Writing session 3
+
+Started yet another book: 'Confused Will’s Big List of Things He’d Like to Know about Relational Programming'
+
+Sort of the dual to 'An Imperishable Wonderland of Infinite Fun', although really both books will explore the Wonders and Mysteries of my beloved Relational Programming!
+
+This book is about the things I find really mysterious, or really promising, and would love to see explored deeply, either by me or by others.
+
 Writing session 2
 
 Added topics and a super-rough outline for parts of the Big Bad Braindump.
