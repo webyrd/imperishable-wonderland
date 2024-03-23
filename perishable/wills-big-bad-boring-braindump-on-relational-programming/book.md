@@ -22,9 +22,9 @@ Get it done!
 
 I remembered this as "Write poorly, proudly!", which I prefer slightly.)
 
-Get all the ideas in my head down on paper as quickly as possible.  "The worst finished book is better than the best unfinished book" [TODO <- something like that --- find exact quote in the Film Courage video I linked to in a recent video; add reference]
+Get all the ideas in my head down on paper as quickly as possible.  "The worst finished book is better than the best unfinished book" [something like that --- find exact quote in the Film Courage video I linked to in a recent video; add reference]
 
-Dean Wesley Smith's notion of working at "pulp speed" also inspires me to write a book "into the dark" [TODO <- something like that --- find exact phrase in DWS book; add reference]  Just sit down and start typing!
+Dean Wesley Smith's notion of working at "pulp speed" also inspires me to write a book "into the dark" [something like that --- find exact phrase in DWS book; add reference]  Just sit down and start typing!
 
 # Who is the audience for this book?
 
@@ -42,7 +42,7 @@ Most miniKanrens are implemented as *embedded domain-specific languages* (EDSLs)
 
 # What is microKanren?
 
-microKanren (also written "muKanren" or "muKanren" [TODO change to Greek 'mu' character]) is a minimal version of miniKanren created by Jason Hemann and Daniel P. Friedman [cite paper and github repo].  The original microKanren paper includes a tutorial reconstruction, including a step-by-step reconstruction of how to arrive at the interleaving search strategy, given how simpler search strategies can't find answers that exist in infinite search spaces.
+microKanren (also written "muKanren" or "muKanren" [change to Greek 'mu' character]) is a minimal version of miniKanren created by Jason Hemann and Daniel P. Friedman [cite paper and github repo].  The original microKanren paper includes a tutorial reconstruction, including a step-by-step reconstruction of how to arrive at the interleaving search strategy, given how simpler search strategies can't find answers that exist in infinite search spaces.
 
 microKanren is designed to be easily ported to other languages. The canonical core microKanren implementation is fewer than 50 lines of Scheme, and does use Scheme macros.  It is possible to implement miniKanren on top of microKanren, which is especially convenient in languages that supportsyntactic extension through macros (such as most Lisps, Rust, etc.).  A standard exercise for anyone learning miniKanren is to implement a version of microKanren in a host language of their choice.  As a result, microKanren has been implemented hundeds or thousands of times in dozens of host languages.  The main [miniKanren website](http://www.minikanren.org) contains links to many microKanren implementations---the website used to keep track of every microKanren implementation, but the number of implementations quickly became overwhelming.
 
@@ -216,7 +216,7 @@ relational implications of
 
 ## Relational arithmetic
 
-[TODO explore tradeoffs, laziness, domains, floundering, supported operations, etc.]
+[explore tradeoffs, laziness, domains, floundering, supported operations, etc.]
 
 ### passing a ground number as an argument and using normal arith operations
 
@@ -226,7 +226,7 @@ relational implications of
 
 ### Peano, and how it is good for increment and decrement
 
-### "Oleg arithmetic" [TODO <- include FLOPS paper, Prolog version, mk version, talk about proofs, decidability, performance, lazy vs. non-lazy, partally-instantiated numerals and which numbers they can represent, etc.]
+### "Oleg arithmetic" [include FLOPS paper, Prolog version, mk version, talk about proofs, decidability, performance, lazy vs. non-lazy, partally-instantiated numerals and which numbers they can represent, etc.]
 
 ### CLP(FD)  cKanren, core.lgic, etc.
 
@@ -234,7 +234,7 @@ relational implications of
 
 ### CLP(R)
 
-### bit vector constraints  [TODO <- does this make sense?]
+### bit vector constraints  [does this make sense?]
 
 ### CLP(SMT)   different solvers and the theories they support, smt-lib, solvers with sin and cos, etc.
 
@@ -276,9 +276,9 @@ relational implications of
 
 ## Curry -- laziness and needed narrowing
 
-## Godel [TODO dots over the o] [TODO include the successor]
+## Godel [dots over the o] [include the successor language]
 
-## [TODO include other languages, esp. older ones]
+## [include other languages, esp. older ones]
 
 # Constraint solving
 
@@ -376,15 +376,15 @@ relational implications of
 
 # Things I'm excited about right now
 
-## machine learning for automated theorem proving and proof assistants, inspired by Alpha Go [TODO <- add CPP'24 talk] [TODO implement this!!!!]
+## machine learning for automated theorem proving and proof assistants, inspired by Alpha Go [add CPP'24 talk] [implement this!!!!]
 
-## Natural deduction [TODO implement this!!!!]
+## Natural deduction [implement this!!!!]
 
-## Sequent calculus [TODO <- add tutorial]
+## Sequent calculus [add tutorial]
 
 ## Incompleteness logics
 
-## Using sequent calculus to implement a type system proving an expression won't evaluate [TODO <- add POPL'24 reference] [TODO implement this!!!!]
+## Using sequent calculus to implement a type system proving an expression won't evaluate [TODO <- add POPL'24 reference] [implement this!!!!]
 
 # Interesting things I know almost nothing about, but which seem relevant
 
