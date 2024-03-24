@@ -2,6 +2,10 @@
 
 ## Saturday, March 23, 2024
 
+### Session 2
+
+Put in 45 minutes on 'Confused Will’s Big List of Things He’d Like to Know about Relational Programming'
+
 ### Session 1
 
 Put in an hour on 'Will's Big Bad Boring Braindump on Relational Programming'
