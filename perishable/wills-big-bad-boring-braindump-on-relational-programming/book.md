@@ -100,6 +100,26 @@ Exercise: use the ideas from these example applications to explore other theorem
 
 # What are the tradeoffs of implementing miniKanren/microKanren as an embedded domain specific language?
 
+Advantages of implementing miniKanren as an embedded domain specific language include:
+
+* the implementation can use parts of the host language's implementation---for example, the existance of pairs, symbols, and numbers in Scheme;
+
+* programmers can get the benefits of a (constraint) logic programming language, without having to give up the features and libraries and runtime of the host language---for example, Clojure programs can write a sophisticated application in Clojure, making full use of the JVM and the many Clojure and Java libraries, while adding logic programming functionality through `core.logic` (David Nolen's miniKanren-inspired EDSL in Clojure);
+
+* miniKanren or microKanren can be quickly or easily ported to almost any host language, on various runtimes/platforms;
+
+* the small size of miniKanren, and especially microKanren, makes it quick and easy to modify or extend the implementaion.
+
+Disadvantages of implementing miniKanren as an embedded domain specific language include:
+
+* there is not a single "canonical" implementation or set of libraries that the entire miniKanren community uses;
+
+* the miniKanren community is itself somewhat fragmented, based on host language;
+
+* the ease of implementation has resulted in hundreds or thousands of simple implementations of microKanren, and a fair number of implementations of miniKanren, which can seem overwhelming to anyone new to miniKanren;
+
+* the embedded domain specific language approach can make whole-program optimization, compilation, and other techniques challenging or impossible.
+
 # What are the differences between miniKanren and other logic or constraint logic programming languages?
 
 # The Prolog elephant in the room

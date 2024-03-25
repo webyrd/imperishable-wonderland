@@ -1,5 +1,11 @@
 # Writing Log
 
+## Sunday, March 24, 2024
+
+### Session 1
+
+Put in 18 minutes on 'Will's Big Bad Boring Braindump on Relational Programming', describing tradeoffs of the EDSL approach to miniKanren.
+
 ## Saturday, March 23, 2024
 
 ### Session 2
