@@ -1,5 +1,11 @@
 # Writing Log
 
+## Monday, March 25, 2024
+
+### Session 1
+
+Started Yet Another Book!  'Will’s Dubious and Opinionated Collection of miniKanren and Relational Programming Resources', which will be a collection of lovely and most useful resources related to miniKanren and reltional programming that may be useful, along with my questionable take on these resources.
+
 ## Sunday, March 24, 2024
 
 ### Session 1
