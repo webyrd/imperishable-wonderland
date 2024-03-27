@@ -216,23 +216,66 @@ Disadvantages of implementing miniKanren as an embedded domain specific language
 
 ## Standard resources for learning Prolog
 
-[TODO]
+'The Art of Prolog' -- esp. on meta-interpreters
+
+'Clause and Effect'
+
+'ISO Prolog'
+
+'The Craft of Prolog'
+
+'Learn Prolog Now'
+
+[Ivan Bratko book on AI programming]
+
+[the book that includes defeasible logic programming -- link to the free version on author's website]
+
+[online book that discusses program slices]
 
 ## Cool things about Prolog
 
 ### Prolog syntax
 
-[TODO]
+* meta programming
+
+* syntactic extensions (disjunction) and restrictions (Datalog, ASP) naturally map onto extensions/restrictions to the logics expressed, and the computational power/expense/guarantees of those logics
 
 ### Prolog meta interpreters
 
-[TODO]
+[clauses are in the global database]
+
+[call]
+
+### Many implementations, some with very interesting extensions
+
+* Ciao Prolog
+
+* Andorra Prolog
+
+* CLP(X) extensions (for example, in SWI-Prolog)
+
+* Constraint Handling Rules extensions [which Prologs support this?]
 
 ## Less cool things about Prolog (from the perspective of relational programming)
 
 ### Prolog, purity, and the default language choices
 
-[TODO]
+DFS as default choice
+
+no occur-check as default choice
+
+purity, or lack of it:
+
+* `!` (cut) --- and its different "colors"
+
+* `copy_term`
+
+* `set_of`, `bag_of`, etc.
+
+Many Prolog programmers seem to think that if their program doesn't
+contain "red" cuts, their program is "declarative".  Whether the
+program is declarative may be debatable.  However, most likely it
+isn't *relational*.
 
 ## Translating Prolog programs to miniKanren
 
