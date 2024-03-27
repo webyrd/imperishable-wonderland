@@ -1,5 +1,11 @@
 # Writing Log
 
+## Tuesday, March 26, 2024
+
+### Session 1
+
+Added [TODO] to empty sections of Big Boring Braindump book so that the PDF would display the sections correctly on the page.  Worked on entries.
+
 ## Monday, March 25, 2024
 
 ### Session 1
