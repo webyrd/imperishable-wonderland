@@ -61,6 +61,18 @@ TODO look at draft papers, my private repos, TiddlyWiki, etc.  Some of this will
 
 TODO create annotated bibliography of mk-related and relational books and papers and talks or whatever
 
+How I think about mk
+how to think about what a `run` means, how to interpret the answers produced, etc.
+how to think about `==` and `=/=`
+Confusion people have with `=/=`.
+constraints and consistency/inconsistency + many worlds interpretation---OS process metaphor
+Dan Friedman -- search strategy as an OS scheduling independent processes; complete search means that processes that don't diverge will run to completion, given enough time and memory
+properties/desiderata of `run`, mk goals, etc.
+Motivation for mk constraints.
+Table metaphor for mk.
+Debugging
+Connection with SQL, etc.
+
 what can mk learn from core.logic and OCanren?
 
 ** MarkovJunior looks super cool.  I suspect there is a way to combine this with mk **
