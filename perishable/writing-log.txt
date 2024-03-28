@@ -1,5 +1,13 @@
 # Writing Log
 
+## Wednesday, March 27, 2024
+
+### Session 1
+
+Added to `topics.txt` from email I sent myself earlier today.
+
+Started Yet Another New Book, 'How I Think About Relational Programming', to talk about...how I think about relational programming, starting with these new topics.
+
 ## Tuesday, March 26, 2024
 
 ### Session 1
