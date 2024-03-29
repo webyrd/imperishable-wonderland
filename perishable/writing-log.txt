@@ -2,9 +2,13 @@
 
 ## Thursday, March 28, 2024
 
+### Session 2
+
+Writing on 'An Imperishable Wonderland of Infinite Fun: A Relational View of Computation', really for the first time.
+
 ### Session 1
 
-Writing on 'How I Think About Relational Programming'.
+Writing on 'How I Think About Relational Programming'.  Added sketch of table model.
 
 ## Wednesday, March 27, 2024
 
