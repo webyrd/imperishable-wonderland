@@ -76,39 +76,75 @@ The CUP book describing LambdaProlog even gives a relational interpreter.  I was
 
 ## Would implementing miniKanren constraints using constraint handling rules (CHR) make it easier to implement constraints?
 
+[TODO]
+
 ## Is there a nice way to compose constraints in a way that is sound?  In particular, to allow multiple constraints to interact with each other for the same logic variable?  Would types remove this issue entirely?
+
+[TODO]
 
 ## What would the equivalent of Chris Okasaki's 'Purely Functional Data Structures' book look like for relational programming?
 
+[TODO]
+
 ## Can we create purely relational meta interpreters?
+
+[TODO]
 
 ## Can we create purely relational abstract interpretation (perhaps involving tabling), and combine an abstract interpreter with a concrete interpreter in order to perform more interesting program synthesis?
 
+[TODO]
+
 ## What are the best ways to encode implication and universal quantification in miniKanren?
+
+[TODO]
 
 ## Can heterogenous towers of interpreters be collapsed?
 
+[TODO]
+
 ## Would integrating a SAT or SMT solver into miniKanren allow for more efficient solving than when calling out to an external solver?
+
+[TODO]
 
 ## Would implenting the Extended Andorra Model help us with conjunction in miniKanren?  (from Michael Ballantyne)
 
+[TODO]
+
 ## Is there a relational, general version of `copy_term` from Prolog?
+
+[TODO]
 
 ## What is the best way to implement relational aggregate operations?
 
+[TODO]
+
 ## What are the tradeoffs inherent in encoding negation, aggregate operations, etc., via relational interpreter(s)?  At what level of nesting of interpreters (if any) does the "useful" expressive power "level off"?
+
+[TODO]
 
 ## What is the semantic relationship between `append` in Scheme, `appendo` in miniKanren, and `append` in a relational Scheme interpreter in miniKanren?
 
+[TODO]
+
 ## Is it possible to combine a relational parser, a relational type inferencer or type checker, and a relational interpreter into a single program that can perform program synthesis without entering "generate and test"?
+
+[TODO]
 
 ## What exactly is going on in my experiment combining shallow and deep embeddings of miniKanren in miniKanren, where sharing fresh variables in the expression to be synthesized seems to combine the run* expressiveness with the efficienciency of a shallow embedding?  How far can this be pushed?  Is this behavior new, or has it been noticed before?  Does this behavior occur in other contexts?
 
+[TODO]
+
 ## Is it possible to combine interpreters implementing operational semantics, axiomatic semantics, denotional semantics, etc., into a single program that can perform semantics-based synthesis and reasoning without entering "generate-and-test"?
+
+[TODO]
 
 ## Is it possible to efficiently generate fixpoint combinators in a manner similar to how we can generate quines?
 
+[TODO]
+
 ## Barliman interpreter -- properties (associativity) and eigen variables for synthesis specification, instead of just concrete input/output examples (PBE)?
+
+[TODO]
 
 ## Is it possible to make inherently small-step relations "fail fast"?
 
