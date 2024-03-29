@@ -1,5 +1,11 @@
 # Writing Log
 
+## Thursday, March 28, 2024
+
+### Session 1
+
+Writing on 'How I Think About Relational Programming'.
+
 ## Wednesday, March 27, 2024
 
 ### Session 1
