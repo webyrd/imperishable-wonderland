@@ -1,6 +1,6 @@
 # Major 'Arcs' (in the manga/anime sense)
 
-The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, call-by-value vs. call-by-name vs. call-by-need s. call-by-push-value, etc.)
+The Most Beautiful Program Ever Written (extensions, including errors and angelic execution, delimited control/effect handlers, store-passing style, mutation, call-by-value vs. call-by-name vs. call-by-need vs. call-by-push-value, etc.)
 cool-relational-interpreter-examples
 Fun, interesting, and thought-provoking examples of relational Scheme interpreters at work.
 https://github.com/webyrd/cool-relational-interpreter-examples

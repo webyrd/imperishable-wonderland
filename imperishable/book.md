@@ -22,7 +22,9 @@ Yesss!
 
 [generating twines using absento rather than =/=]
 
-[quasiquote quines from ICFP 2017 pearl]
+[synthesizing quasiquote quines in micro-Scheme in Scheme in mk from ICFP 2017 pearl]
+
+[these interpreter examples but with a staged evaluator]
 
 [self-reps and viruses]
 
@@ -33,6 +35,12 @@ Yesss!
 [synthesizing append from input/output examples, with and without eigens, etc.]
 
 [synthesizing append from associativity property + eigens]
+
+[dynamic scope vs. static/lexical scope and program synthesis, from ICFP 2017 pearl example --- synthesize a program that evaluates to different values under dynamic scope vs. lexical scope]
+
+[explicit handling of errors in relational interpreter and angelic execution via relational interpreter -- see Polyconf 2015]
+
+[incorrectness logic and the new two-sided sequent calculus type system stuff from POPL'24 --- implement relationally]
 
 [relational type inference and type inhabitation]
 
