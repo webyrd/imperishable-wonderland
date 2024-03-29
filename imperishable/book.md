@@ -51,3 +51,5 @@ Yesss!
 [mini-in-mini for synthesis of mk relations and run expressions]
 
 [conjunction of deep + shallow embeddings of mk-in-mk to get improved performance from the shallow embedding but the improved expressiveness (`run*` instead of `run 1`) from the deep embedding]
+
+[relational exploration of the Chomsky Hierarchy]
