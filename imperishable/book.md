@@ -24,6 +24,12 @@ Yesss!
 
 [quasiquote quines from ICFP 2017 pearl]
 
+[self-reps and viruses]
+
+[synthesizing omega as a small-step quine]
+
+[synthesizing combinatory logic terms, including for fixed point combinators]
+
 [synthesizing append from input/output examples, with and without eigens, etc.]
 
 [synthesizing append from associativity property + eigens]
