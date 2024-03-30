@@ -184,13 +184,45 @@ Disadvantages of implementing miniKanren as an embedded domain specific language
 
 [TODO]
 
-# What are the main learning resources for miniKanren and relational programming?
+# What are the main learning resources for learning miniKanren?
 
-[TODO]
+[The Reasoned Schemer, 2nd Ed. (MIT Press, 2018)]
 
-# What are the main resources for someone wanting to learn about miniKanren and/or relational programming from a research perspective?
+[microKanren paper]
 
-[TODO]
+[ICFP 2017 pearl]
+
+[SW 2012 quines pearl]
+
+[Oleg arith FLOPS paper]
+
+[LogicT paper]
+
+[alphaKanren + alphaLeanTAP papers]
+
+[cKanren paper]
+
+[core OCanren papers and talks]
+
+[core.logic talks by David Nolen and others]
+
+[unpublished paper on representations of triangular substs]
+
+[Ramana undergrad honor's thesis]
+
+[my dissertation]
+
+[miniKanren.org]
+
+[miniKanren.org Livecode tutorial]
+
+[mK and relational programming workshop talks and papers]
+
+[YT uncourses/advanced mk hangouts]
+
+[talks: Conj untalk with Dan; Relational Exploration of Chomsky Hierarchy with Dan at SL; Polyconf'15; TMBPEW; which others?]
+
+## Relational programming
 
 # What came before miniKanren?
 
