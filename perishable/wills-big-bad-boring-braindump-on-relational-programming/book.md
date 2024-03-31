@@ -607,6 +607,26 @@ relational implications of
 
 ("Computer says 'no'")
 
+## Divergence
+
+[causes of divergence, as described in my dissertation]
+
+[`run 1` rather than `run *` or `run n` for `n` > 1]
+
+## No answers/missing answers
+
+[run with distinct fresh logic variables as the arguments]
+
+[comment out one or more relations in a conjunction---can replace an entire conjunction with `succeed` or the equivalent, `(== #f #f)`, if necessary]
+
+## Unexpected answers
+
+## Bizarre and unexplainable behavior
+
+[missing `fresh`/the infamous `lambda` error]
+
+[inadvertantly mixing terms and goals, such as in `(== (appendo x y z) out)` and `(== (== x 4) y)`]
+
 # The art of cheating without being caught
 
 ## Barliman interpreter hax
@@ -639,11 +659,37 @@ relational implications of
 
 # Semantics of logic programming
 
-[TODO]
+Herbrand Universe
+
+Fixpoint semantics
+
+unification/anti-unification and lattices (Reynolds and Plotkin papers from ~1971/1970ish)
+
+[John W. Lloyd book]
+
+[Kees Doets book]
+
+[stable-model semantics for ASP]
+
+[Ramana and Michael's mechanized proof of the correctness of mK-style unification with triangular substitutions and walk]
+
+[St. Petersburg work on semantics for OCanren (and perhaps miniKanren)]
 
 # Tabled evaluation
 
-[TODO]
+[ACM article by Warren (IIRC)]
+
+[there was an ACM article by J. Cohen---was it on tabled evaluation, or on constraint logic programming?  I forget, though I found the paper interesting.  Look up that paper!]
+
+[SLG-resolution]
+
+[the approach used on the tabling implementation with Ramana]
+
+[the connection between tabled logic programming and co-inductive logic programming]
+
+[when are calls considered equivalent?  subsumption]
+
+[XSB Prolog and various notions of tabling]
 
 # Term rewriting and term reduction
 
