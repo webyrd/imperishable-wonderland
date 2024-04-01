@@ -631,7 +631,19 @@ relational implications of
 
 ## Barliman interpreter hax
 
-[TODO]
+[Greg observed that the relational interpreter was synthesizing huge numbers of `lambda` expressions with increasingly long formal parameter lists, where none of the formal parameters were referenced in the body of the `lambda`.  Greg made an adjustement to prevent this behavior (how?)]
+
+[use `lookup` function in Scheme if the environment is sufficiently ground]
+
+[dynamically reordering serious goals/recursive calls in the conjunction for procedure application, based on groundness of the arguments]
+
+[weighted variant of `conde`, in which clauses have hand-crafted weights]
+
+[ICFP 2017 pearl description]
+
+[strictly speaking, I think these changes are heuristics rather than optimizations, since an optimization in the algorithmic sense never leads to more inefficient behavior than the unoptimized code.  These heuristics have some overhead, or bias the search in a way that might slow down some synthesis problems, or can be sensitive to slight changes in the input (such as how recursive calls in the conjunction are reordered for procedure application, which can greatly speed up synthesis, but can also slow down synthesis)]
+
+[some of these heuristics seem more important in practice than others.  For example, the environment lookup heuristic and the dynamic reordering of recursive calls in procedure application.  We tried applying these techniques in the `n-grams` repo, with some success, but without being able to replicate the full speedup seen in Barliman.]
 
 # Data structures
 
