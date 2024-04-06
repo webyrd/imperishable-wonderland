@@ -683,7 +683,7 @@ unification/anti-unification and lattices (Reynolds and Plotkin papers from ~197
 
 [stable-model semantics for ASP]
 
-[Ramana and Michael's mechanized proof of the correctness of mK-style unification with triangular substitutions and walk]
+[Ramana Kumar and Michael Norrish's mechanized proof of the correctness of mK-style unification with triangular substitutions and walk]
 
 [St. Petersburg work on semantics for OCanren (and perhaps miniKanren)]
 
@@ -762,3 +762,11 @@ unification/anti-unification and lattices (Reynolds and Plotkin papers from ~197
 # Is there a formal semantics for miniKanren?
 
 [TODO]
+
+# Difference lists and relational programming
+
+[TODO -- are Prolog-style difference lists useful when programming purely relationally?  Why, or why not?  What are good examples, either way?  What are canonical use cases?]
+
+# Prolog II and rational infinite trees
+
+[TODO - A.C. paper describing the rational infinite trees in terms of rewriting instead of unification, and the followup paper by others on a logical reconstruction of Prolog II, showing that there is a logic programming interpretation.  Did they ever figure out if there is a logic programming interpretation of disequality over rational trees?  What is the relationship, if any, to tree automata, tabling, co-inductive logic programming, etc.?]
