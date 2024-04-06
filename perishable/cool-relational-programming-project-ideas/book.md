@@ -24,6 +24,28 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 # Cool Relational Programming Project Ideas
 
+## Play with Gentzen systems, Hilbert systems, etc., in miniKanren.
+
+### Implement sequent calculus, natural deduction, Hilbert-style system, and computability logic in miniKanren.
+
+I suspect CLP(Set) will be needed for sequent calculus, at least.
+
+If I recall correctly, either Hilbert-systems and/or natural deduction uses lists instead of sets.
+
+I think I'd learn a lot about automated theorem proving and logic by playing around with these systems.
+
+### Implement 'Ill-Typed Programs Don't Evaluate' paper by Steven Ramsey and Charlie Walpole (POPL'24 London)
+
+Implement fully relationally in miniKanren the ill-typedness type system from this POPL'24 paper, which is expressed in the sequent calculus.  The paper describes a "two-sided" type system: an expression that typechecks under the "normal" typing rules "will not go wrong"; an expression that typechecks under the "ill-typing system" "will not evaluate" (that is, when evaluated the expression will either signal an error or diverge/loop forever).
+
+Then, use this type system for a relational interpreter, to improve the ability to cut off parts of the search tree that are guaranteed to never be reachable according to the ill-typeness rules.
+
+## Relational implementations of the systems in 'First-Order Logic and Automated Theorem Proving'
+
+Melvin Fitting's book, 'First-Order Logic and Automated Theorem Proving', is full of interesting logical systems, and techniques for automated theorem proving over those systems (for example, tableaux-based methods).  The book includes Prolog code for at least a few of the ATP systems.  The Prolog code looks pretty clean, although it doesn't appear to be completely relational at first glance.
+
+Implement these logics and ATP systems in miniKanren, purely relationally.  This might include porting Prolog code, or skipping the Prolog code and just doing what makes the most sense in miniKanren (or alphaKanren, or whatever).
+
 ## Relational Prolog interpreter
 
 It is a pain to translate Prolog programs to miniKanren, especially since Prolog programs tend to contain a mixture of pure and impure logical operations.  Sidestep the issue by just implementing an interpreter for Prolog, cuts and all, as a miniKanren relation.  Ideally would support `copy_term`, `!` (cut), `call`, etc.  Stage the interpreter for improved performance in some cases.
