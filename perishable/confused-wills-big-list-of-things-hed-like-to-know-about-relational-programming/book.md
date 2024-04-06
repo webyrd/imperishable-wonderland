@@ -74,11 +74,50 @@ Nada Amin has shown that it is possible to port the quine-generating relational 
 
 The CUP book describing LambdaProlog even gives a relational interpreter.  I was fully expecting to see the interpreter synthesizing programs.  Yet they only seem to run the program forward.  They seem mostly concerned with the mechanized meta-theory uses of LambdaProlog (HOAS, implication, etc.), just like in Twelf.  Fair enough.  But, since they are already going to the trouble of writing their programs as relations in an expressive logic programming language, why not also support the ability to run these relations using a complete, interleaving search, or some other search strategy that permits program synthesis?
 
+## Term subsumption, subsumption lattices, unification, anti-unification, and semi-unification.
+
+The notion of term subsumption comes up over and over again in logic programming.
+
+For terms `t` and `u`, `t` subsumes `u` iff there exists a substitution `s` such that:
+
+```
+s(t) = u
+```
+
+For example, `f(X,Y)` subsumes each of the terms `f(Z,Z)`, `f(a,Y)`, `f(X,b)`, and `f(a,b)`.
+
+If terms `t` and `u` subsume each other then `t` and `u` are the same, up to consistent renaming of logic variables.
+
+Subsumption can be viewed as a generalization of pattern matching, in which both sides can contain variables.
+
+In 1970 Plotkin pointed out that Robinson's 1965 unification algorithm can be seen as operating over terms in a lattice defined by term subsumption, augmented with `top` and `bottom` terms---'top' is a special 'variable' term that is more general than any other term in the lattice, and `bottom` is a special 'inconsistent' term.  This "subsumption lattice" (as named by Plotkin) is a complete, non-modular lattice, where unification is the `meet` operation, and anti-unification is the `join` operation.
+
+[TODO create figure with examples, and make sure I have meet vs. join correct.  Cite Plotkin and Reynolds papers from 1970/1971]
+
+For terms `t` and `u`, the unification problem asks if there exists a substitution `s` such that:
+```
+s(t) = s(u)
+```
+
+For terms `t` and `u`, the semi-unification problem asks if there exists substitutions `s` and `s'` such that:
+
+```
+s'(s(t)) = s(u)
+```
+
+(How to picture semi-unification in terms of lattice operations?)
+
+Unlike first-order syntactic unification, the general version of first-order syntactic semi-unification is undecidable, although there are interesting decidable fragments, such as ASUP and R-ASUP, which restruct the problem to acyclic variants.
+
+The notion of semi-unification comes up naturally in polymorphic type systems.  For example, see Fritz Henglein's PhD dissertation.
+
+SWI-Prolog has a predicate called something like `subsumes_term/2`, which uses +/- modes on its arguments.  Many times I've wanted a relational version of this operation.  It seems like semi-unification might provide a relational variant of this constraint, but it seems too powerful.  Can term subsumption be implemented directly as a relation/constraint?  Why isn't this a standard relational constraint?  Or is it a standard relational constraint in some systems, and I just haven't noticed?  What are the decidability and computational complexity results for term subsumption as a relation/lazy constraint?  Maybe I just need to implement `subsumeso` as a constraint, and see if I run into trouble.  What is the relationship, if any, between terms subsumption and anti-unification?  Between term subsumption and Prolog's `copy_term/2`?  Between subsumption and the `templateo` constraint I played around with years ago?
+
 ## Sequent calculus confusion
 
-### Is sequent calculus a better match for miniKanren implementation than natural deduction?
+Is sequent calculus a better match for miniKanren implementation than natural deduction?
 
-### What precisely is the relationship between sequent calculus and LambdaProlog?  What is a Heriditary Harrop Formula, and how is it related to LambdaProlog and to the sequent calculus?
+What precisely is the relationship between sequent calculus and LambdaProlog?  What is a Heriditary Harrop Formula, and how is it related to LambdaProlog and to the sequent calculus?
 
 ## Would implementing miniKanren constraints using constraint handling rules (CHR) make it easier to implement constraints?
 
