@@ -28,8 +28,102 @@ Anyone interested in miniKanren or relational programming who is trying to make 
 
 # miniKanren Learning Resources
 
-# Workshops
+## Online Tutorials
+
+[Livecode]
+
+# Conferences and Workshops
+
+[miniKanren and Relational Programming Workshop]
+
+[Scheme and Functional Programming Workshop]
+
+[Unconfo]
+
+[ML/OCaml Workshops]
+
+[ICFP]
+
+[ICLP]
+
+[FLOPS]
+
+[LOPSTR]
+
+[PADL]
+
+# Summer Schools
+
+[ALP -- for general LP]
 
 # Annotated Bibliography
 
+## Books
+
+[TRS 2018]
+
+[TRS 2005]
+
+[Joy of Clojure]
+
+[7 More Languagues in 7 Weeks]
+
+[Imperishable Wonderland...]
+
+[which other books?]
+
+## Dissertations
+
+[Ramana Kumar's undergrad honor's diss from ANU]
+
+[William E. Byrd's diss from IU]
+
+[Jason Hemann diss]
+
+[St. P. dissertations]
+
+[Naval architecture]
+
+[game/storytelling diss that used core.logic (I believe)]
+
+[etc.]
+
+## Papers
+
+[Robinson 1965]
+
+[Plotkin 1970]
+
+[Reynolds 1971]
+
+[A.C. infinite terms in Prolog II]
+
+[a logical reconstruction of Prolog II]
+
+[logicT paper]
+
+[ICLP paper on alphaLeanTAP]
+
+[2017 ICFP pearl]
+
+[Galadriel paper]
+
+[OCanren papers from various venues, such as ML and OCaml workshops]
+
+[FLOPS paper on pure relational arithmetic]
+
+[relevant papers from Scheme Workshop; 2006 original paper on mk; alphaKanren; cKanren; 2012 quines pearl; what else?]
+
+[papers from miniKanren and Relational Programming workshops]
+
 # Talks
+
+[TMBPEW]
+
+[Untalk]
+
+[David Nolen talks]
+
+[collect academic talks]
+
+[recorded talks from SW/ICFP/mkW/etc.]
