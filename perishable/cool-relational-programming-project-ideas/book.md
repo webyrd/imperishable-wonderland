@@ -8,19 +8,19 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 # What is this book?
 
-[TODO]
+This book is a collection of projects related to miniKanren and/or relational programming that I think would be fun to hack on.
 
 # Why this book?
 
-[TODO]
+I figure it would be helpful to me, and to others, to describe in some detail projects related to relational programming that I think are worth exploring.
 
 # The writing philosophy behind this book
 
-[TODO]
+Whenever I have an idea for a juicy project, write it down!
 
 # Who is the audience for this book?
 
-[TODO]
+Me!  And anyone else who is interested in relational programming and/or miniKanren.
 
 # Cool Relational Programming Project Ideas
 
