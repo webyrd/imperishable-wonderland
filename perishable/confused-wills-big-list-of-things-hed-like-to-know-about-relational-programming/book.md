@@ -74,6 +74,12 @@ Nada Amin has shown that it is possible to port the quine-generating relational 
 
 The CUP book describing LambdaProlog even gives a relational interpreter.  I was fully expecting to see the interpreter synthesizing programs.  Yet they only seem to run the program forward.  They seem mostly concerned with the mechanized meta-theory uses of LambdaProlog (HOAS, implication, etc.), just like in Twelf.  Fair enough.  But, since they are already going to the trouble of writing their programs as relations in an expressive logic programming language, why not also support the ability to run these relations using a complete, interleaving search, or some other search strategy that permits program synthesis?
 
+## Sequent calculus confusion
+
+### Is sequent calculus a better match for miniKanren implementation than natural deduction?
+
+### What precisely is the relationship between sequent calculus and LambdaProlog?  What is a Heriditary Harrop Formula, and how is it related to LambdaProlog and to the sequent calculus?
+
 ## Would implementing miniKanren constraints using constraint handling rules (CHR) make it easier to implement constraints?
 
 [TODO]
