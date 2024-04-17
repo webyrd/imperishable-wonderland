@@ -131,6 +131,46 @@ We can represent addition of two natural numbers (non-negative integers) `x` and
 
 [need for complete search]
 
+# Invariants
+
+An *invariant* is a property that always holds (it never varies, hence the name).  A famous invariant from physics is the speed of light in a vacuum, *c*, which is always 299,792,458 meters per second.  Invariants allow for powerful forms of reasoning---for example, the consequences of special relativity are intimately connected to the invariance of the speed of light (or more generally, the speed of causality).
+
+Invariants also allow for powerful forms of reasoning in logic, and in logic programming.  miniKanren programmers encounter invariants in at least three forms: (1) invariants guaranteed by the miniKanren implementation; (2) invariants guaranteed by a relation written in miniKanren; and (3) invariants that the programmer must be careful to maintain, at the risk of the resulting computation exhibiting unsound behavior (such as returning incorrect answers, or a `run*` query terminating without producing every correct answer).
+
+## Invariants guaranteed by the miniKanren implementation
+
+[reification of answers
+
+faster-miniKanren: `(=/= (_.0 _.1))` vs. `(=/= (_.1 _.0))`]
+
+## Invariants guaranteed by a relation written in miniKanren
+
+## Invariants that the programmer must maintain
+
+["Oleg numerals" used in the purely relational arithmetic system described in chapters 7 and 8 of (both editions) of *The Reasoned Schemer*, and in a FLOPS paper [cite] --- every non-negative integer has a unique representation as an Oleg numeral (a little-endian binary list).  For example, the unique representation for zero is the empty list `()`, the unique representation of one is `(1)`, and the unique representation of two is `(0 1)`.  When using the relational arithmetic system, the programmer must maintain the invariant that no list representing an Oleg numeral may contain a `0` as its most significant digit.  For example, this `run 1` expression maintains the invariant on Oleg numerals:
+
+```
+(run 1 (n-squared)
+  (fresh (x)
+    (== `(0 . ,x) n)
+    (*o n n n-squared)))
+```
+
+However, this `run 1` expression violates the invariant, since `n` is `(0 . ())`---equivalent to `(0)`---which is a list representing an Oleg numeral in which `0` is the most significant digit.
+
+```
+(run 1 (n-squared)
+  (fresh (x)
+    (== `(0 . ,x) n)
+    (== '() x)
+    (*o n n n-squared)))
+```
+
+The `*o` relation---along the other relations in the purely relational arithmetic system---was carefully designed to take advantage of the invariant that each non-negative number has a unique representation as an Oleg numeral.  If the `*o` relation is called with terms that invariant this constraint, `*o` may produce incorrect results.  The `*o` relation maintains the invariant with respect to legal Oleg numerals; however, it does not check that the arguments passed to it are legal Oleg numerals.  It is your responsibility as a user of the relational arithmetic system to ensure you maintain the invariant.
+
+]
+
+[alphaKanren --- the first argument to `tie` or to `hash` must be a nom/atom]
 
 # Logic programming vs. constraint programming vs. constraint logic programming vs. functional programming vs. functional logic programming vs. relational programming.
 
